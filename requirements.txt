@@ -1,5 +1,4 @@
 requests
-tkinter
 ttkbootstrap
 yt-dlp
 mutagen
