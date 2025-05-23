@@ -1,0 +1,22 @@
+site_name: Motify
+site_url: https://mosh3eb.github.io/motify
+repo_url: https://github.com/mosh3eb/motify
+theme: material
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage Guide: usage.md
+  - Configuration: configuration.md
+  - API Reference: api.md
+  - Contributing: contributing.md
+  - Changelog: changelog.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+plugins:
+  - search
