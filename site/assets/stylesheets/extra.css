@@ -537,3 +537,176 @@ h3.feature-title,
 .feature-details:hover {
   transform: translateY(-3px);
 }
+
+/* Quick Start Grid */
+.grid.quick-start {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.grid.quick-start > div {
+  background: var(--md-card-bg-color);
+  border-radius: var(--md-card-radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.grid.quick-start > div:hover {
+  transform: translateY(-3px);
+}
+
+/* Features Grid */
+.grid.features {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.grid.features > div {
+  background: var(--md-card-bg-color);
+  border-radius: var(--md-card-radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.grid.features > div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.grid.features h3 {
+  color: var(--md-primary-fg-color);
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.grid.features ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.grid.features li {
+  margin: 0.5rem 0;
+}
+
+/* Roadmap Grid */
+.grid.roadmap {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.grid.roadmap > div {
+  background: var(--md-card-bg-color);
+  border-radius: var(--md-card-radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.grid.roadmap h3 {
+  color: var(--md-primary-fg-color);
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.grid.roadmap ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.grid.roadmap li {
+  margin: 0.5rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.grid.roadmap li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--md-primary-fg-color);
+}
+
+/* Showcase Grid */
+.grid.showcase {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.grid.showcase > div {
+  background: var(--md-card-bg-color);
+  border-radius: var(--md-card-radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.grid.showcase > div:hover {
+  transform: translateY(-3px);
+}
+
+.grid.showcase h3 {
+  color: var(--md-primary-fg-color);
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.grid.showcase a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.grid.showcase a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid > div {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.grid > div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.grid > div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.grid > div:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 76.1875em) {
+  .grid.quick-start,
+  .grid.features,
+  .grid.roadmap,
+  .grid.showcase {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .grid.quick-start > div,
+  .grid.features > div,
+  .grid.roadmap > div,
+  .grid.showcase > div {
+    padding: 1rem;
+  }
+}
