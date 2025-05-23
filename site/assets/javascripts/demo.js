@@ -1,39 +1,52 @@
+// Debug message to verify script loading
+console.log('Demo.js script loaded');
+
 class MotifyDemo {
     constructor() {
+        console.log('Initializing MotifyDemo');
+        
+        // Get DOM elements
         this.searchInput = document.getElementById('search-input');
         this.searchButton = document.getElementById('search-button');
         this.resultsContainer = document.getElementById('search-results');
         this.previewPlayer = document.getElementById('preview-player');
         this.currentAudio = null;
         
-        // Debug log
-        console.log('MotifyDemo initialized');
+        // Debug log element existence
+        console.log('DOM Elements:', {
+            searchInput: !!this.searchInput,
+            searchButton: !!this.searchButton,
+            resultsContainer: !!this.resultsContainer,
+            previewPlayer: !!this.previewPlayer
+        });
         
         if (!this.searchInput || !this.searchButton || !this.resultsContainer) {
-            console.error('Required elements not found:', {
-                searchInput: !!this.searchInput,
-                searchButton: !!this.searchButton,
-                resultsContainer: !!this.resultsContainer
-            });
+            console.error('Required elements not found');
             return;
         }
         
         this.setupEventListeners();
+        console.log('MotifyDemo initialized successfully');
     }
 
     setupEventListeners() {
         console.log('Setting up event listeners');
+        
+        // Search button click
         this.searchButton.addEventListener('click', () => {
             console.log('Search button clicked');
             this.searchTracks();
         });
         
+        // Enter key press
         this.searchInput.addEventListener('keypress', (e) => {
             if (e.key === 'Enter') {
                 console.log('Enter key pressed');
                 this.searchTracks();
             }
         });
+        
+        console.log('Event listeners set up successfully');
     }
 
     async searchTracks() {
@@ -47,8 +60,8 @@ class MotifyDemo {
 
         this.showLoading();
         try {
-            // For demo purposes, we'll use a limited set of sample tracks
             const results = this.getSampleTracks(query);
+            console.log('Search results:', results);
             this.displayResults(results);
         } catch (error) {
             console.error('Search error:', error);
@@ -57,6 +70,8 @@ class MotifyDemo {
     }
 
     getSampleTracks(query) {
+        console.log('Getting sample tracks for query:', query);
+        
         // Sample tracks that match the search query
         const allTracks = [
             {
@@ -83,10 +98,13 @@ class MotifyDemo {
         ];
 
         // Filter tracks based on search query
-        return allTracks.filter(track => 
+        const filteredTracks = allTracks.filter(track => 
             track.title.toLowerCase().includes(query.toLowerCase()) ||
             track.artist.toLowerCase().includes(query.toLowerCase())
         );
+        
+        console.log('Filtered tracks:', filteredTracks);
+        return filteredTracks;
     }
 
     displayResults(results) {
@@ -102,9 +120,12 @@ class MotifyDemo {
             const trackElement = this.createTrackElement(track);
             this.resultsContainer.appendChild(trackElement);
         });
+        
+        console.log('Results displayed successfully');
     }
 
     createTrackElement(track) {
+        console.log('Creating track element:', track);
         const div = document.createElement('div');
         div.className = 'track-item';
         div.innerHTML = `
@@ -126,7 +147,7 @@ class MotifyDemo {
     }
 
     previewTrack(trackId, previewUrl, title) {
-        console.log('Previewing track:', { trackId, title });
+        console.log('Previewing track:', { trackId, title, previewUrl });
         
         if (this.currentAudio) {
             this.currentAudio.pause();
@@ -160,6 +181,7 @@ class MotifyDemo {
     }
 
     showUpgradeMessage() {
+        console.log('Showing upgrade message');
         this.showMessage('Upgrade to full version to download tracks!');
     }
 
@@ -176,10 +198,12 @@ class MotifyDemo {
     }
 
     showLoading() {
+        console.log('Showing loading state');
         this.resultsContainer.innerHTML = '<div class="loading">Searching...</div>';
     }
 
     showError(message) {
+        console.log('Showing error:', message);
         this.resultsContainer.innerHTML = `<div class="error">${message}</div>`;
     }
 }

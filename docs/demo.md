@@ -23,6 +23,13 @@ Experience the power of Motify with our interactive demo. Search for tracks and 
   </div>
 </div>
 
+<script>
+// Debug message to verify script loading
+console.log('Demo page loaded');
+</script>
+
+<script src="../../site/assets/javascripts/demo.js"></script>
+
 ## ✨ Demo Features
 
 <div class="grid features" markdown>
@@ -73,8 +80,6 @@ motify
 ## 📱 Mobile Ready
 
 Try the demo on your mobile device to experience the responsive design!
-
-<script src="../site/assets/javascripts/demo.js"></script>
 
 <style>
 .demo-container {
