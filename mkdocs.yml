@@ -34,6 +34,11 @@ theme:
   favicon: assets/favicon.png
   logo: assets/logo.png
 
+extra_css:
+  - assets/stylesheets/extra.css
+extra_javascript:
+  - assets/javascripts/extra.js
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -123,23 +128,9 @@ extra:
 
 nav:
   - Home: index.md
-  - Getting Started:
-    - Installation: installation.md
-    - Quick Start: usage.md
-  - Features:
-    - Playlist Management: features/playlist.md
-    - Download History: features/history.md
-    - Lyrics Support: features/lyrics.md
-  - API Reference:
-    - Overview: api.md
-    - Configuration: api/configuration.md
-    - Spotify Service: api/spotify.md
-    - Download Service: api/downloader.md
-  - Development:
-    - Contributing: contributing.md
-    - Changelog: changelog.md
-
-extra_css:
-  - assets/stylesheets/extra.css
-extra_javascript:
-  - assets/javascripts/extra.js
+  - Installation: installation.md
+  - User Guide: usage.md
+  - Features: features.md
+  - API Reference: api.md
+  - Troubleshooting & FAQ: troubleshooting.md
+  - Contributing: contributing.md

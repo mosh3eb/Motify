@@ -1,81 +1,61 @@
 # Installation Guide
 
-This guide provides detailed instructions for installing Motify on different operating systems and environments.
+Motify supports Windows, macOS, Linux, and Docker. Follow the steps below for your platform.
 
-## System Requirements
-
-- Python 3.10 or higher
-- 100MB free disk space
+## Prerequisites
+- Python 3.10+
 - Internet connection
 - Spotify account
 
-## Quick Install
-
-The simplest way to install Motify is using pip:
-
-```bash
-pip install motify-music
-```
-
-## Detailed Installation
-
-### Windows
-
-1. Install Python 3.10 or higher:
-   - Download from [python.org](https://www.python.org/downloads/)
-   - Check "Add Python to PATH" during installation
-
-2. Open Command Prompt and install Motify:
-   ```bash
+## Windows
+1. Download and install [Python 3.10+](https://www.python.org/downloads/windows/)
+2. Open Command Prompt and run:
+   ```sh
    pip install motify-music
    ```
-
-3. Verify installation:
-   ```bash
-   motify --version
+3. Launch Motify:
+   ```sh
+   motify
    ```
 
-### macOS
-
-1. Install Python using Homebrew:
-   ```bash
+## macOS
+1. Install [Homebrew](https://brew.sh/) (if not installed)
+2. Install Python 3.10+:
+   ```sh
    brew install python@3.10
    ```
-
-2. Install Motify:
-   ```bash
+3. Install Motify:
+   ```sh
    pip3 install motify-music
    ```
-
-3. Verify installation:
-   ```bash
-   motify --version
+4. Launch Motify:
+   ```sh
+   motify
    ```
 
-### Linux
-
-1. Install Python 3.10:
-   ```bash
-   # Ubuntu/Debian
-   sudo apt update
-   sudo apt install python3.10 python3-pip
-
-   # Fedora
-   sudo dnf install python3.10 python3-pip
-
-   # Arch Linux
-   sudo pacman -S python python-pip
-   ```
-
+## Linux
+1. Install Python 3.10+ using your package manager
 2. Install Motify:
-   ```bash
+   ```sh
    pip3 install motify-music
    ```
-
-3. Verify installation:
-   ```bash
-   motify --version
+3. Launch Motify:
+   ```sh
+   motify
    ```
+
+## Docker
+1. Pull the image:
+   ```sh
+   docker pull mosh3eb/motify
+   ```
+2. Run the container:
+   ```sh
+   docker run -it --rm mosh3eb/motify
+   ```
+
+## Troubleshooting
+- If you encounter issues, see [Troubleshooting & FAQ](troubleshooting.md) or open a [GitHub Issue](https://github.com/mosh3eb/motify/issues).
 
 ## Development Installation
 
@@ -99,23 +79,6 @@ For developers who want to contribute to Motify:
    pip install -e ".[dev]"
    ```
 
-## Docker Installation
-
-You can also run Motify using Docker:
-
-1. Pull the Docker image:
-   ```bash
-   docker pull mosh3eb/motify
-   ```
-
-2. Run the container:
-   ```bash
-   docker run -it --rm \
-     -v ~/Music:/music \
-     -v ~/.config/motify:/config \
-     mosh3eb/motify
-   ```
-
 ## Configuration
 
 After installation, you need to configure Motify:
@@ -129,29 +92,6 @@ After installation, you need to configure Motify:
    - Configure Spotify credentials
    - Set download location
    - Choose default settings
-
-## Troubleshooting
-
-### Common Issues
-
-1. **Python not found**
-   - Ensure Python is in your PATH
-   - Try using `python3` instead of `python`
-
-2. **Permission errors**
-   - Use `sudo` on Linux/macOS
-   - Run as administrator on Windows
-
-3. **Dependencies missing**
-   - Update pip: `pip install --upgrade pip`
-   - Install system dependencies
-
-### Getting Help
-
-If you encounter issues:
-- Check the [FAQ](faq.md)
-- Visit [GitHub Issues](https://github.com/mosh3eb/motify/issues)
-- Join our [Discord Community](https://discord.gg/motify)
 
 ## Next Steps
 

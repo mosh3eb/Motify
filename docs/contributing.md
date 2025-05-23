@@ -1,6 +1,29 @@
 # Contributing to Motify
 
-We love your input! We want to make contributing to Motify as easy and transparent as possible.
+We welcome contributions! Here's how to get started:
+
+## Setting Up
+1. Fork the repo and clone your fork
+2. Install Python 3.10+
+3. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. (Optional) Set up a virtual environment
+
+## Coding Standards
+- Follow PEP8 for Python code
+- Write clear, concise commit messages
+- Add docstrings and comments
+
+## Submitting Pull Requests
+- Create a new branch for your feature or fix
+- Ensure all tests pass
+- Open a pull request with a clear description
+
+## Getting Help
+- Open an issue on GitHub
+- Join our [Discord](https://discord.gg/motify)
 
 ## Development Process
 

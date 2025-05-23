@@ -1,5 +1,39 @@
 # API Reference
 
+## Motify Class
+
+### Initialization
+```python
+from motify import Motify
+motify = Motify()
+```
+
+### Methods
+- `download_track(track_id)`
+- `download_playlist(playlist_id)`
+- `search(query)`
+- `get_history()`
+
+## Config Class
+
+### Initialization
+```python
+from motify import Config
+config = Config(output_dir="/path/to/dir", quality="high")
+```
+
+### Options
+- `output_dir`: Directory for downloads
+- `quality`: Download quality ("high", "medium", "low")
+
+## Example
+```python
+from motify import Motify, Config
+config = Config(output_dir="music", quality="high")
+motify = Motify(config)
+motify.download_track("track_id")
+```
+
 ## Services
 
 ### SpotifyService

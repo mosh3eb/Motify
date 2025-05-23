@@ -1,13 +1,50 @@
-# Motify Documentation
+# Welcome to Motify Docs
 
-Welcome to the Motify documentation! This guide will help you understand and utilize all the features of Motify effectively.
+Motify is a modern, open-source Spotify music downloader and manager with a beautiful GUI, advanced playlist features, and high-quality audio support.
 
-## Quick Navigation
+---
 
+## 🚀 What Makes Motify Special?
+- **Modern, intuitive interface** with dark mode and custom theming
+- **Playlist management** and download queue
+- **Lyrics integration** and download history
+- **Fast, reliable, and open-source**
+
+---
+
+## 📖 Quick Navigation
 - [Installation Guide](installation.md)
 - [User Guide](usage.md)
+- [Features](features.md)
 - [API Reference](api.md)
-- [Configuration](api/configuration.md)
+- [Troubleshooting & FAQ](troubleshooting.md)
+- [Contributing](contributing.md)
+
+---
+
+> **Tip:** Use the sidebar or search to quickly find what you need!
+
+---
+
+## 🖼️ Screenshots
+![Motify UI](assets/screenshots/ui-dark.png)
+
+---
+
+## 💡 Why use Motify?
+Motify is designed for music lovers who want a seamless, powerful, and beautiful way to manage and download their Spotify music collections. Whether you're a casual listener or a power user, Motify has you covered.
+
+---
+
+## 🛠️ Get Started
+- [Installation Guide](installation.md)
+- [User Guide](usage.md)
+
+---
+
+## 🤝 Community & Support
+- [GitHub Issues](https://github.com/mosh3eb/motify/issues)
+- [Discord](https://discord.gg/motify)
 
 ## Documentation Sections
 

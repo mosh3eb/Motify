@@ -1,66 +1,26 @@
-# Usage Guide
+# User Guide
 
-## Getting Started
+## First Run
+- Launch Motify with `motify`
+- On first run, you'll be prompted to connect your Spotify account
+- Follow the on-screen instructions to authenticate
 
-1. Launch Motify:
-```bash
-motify
-```
+## Downloading Music
+- Use the search bar to find tracks, albums, or playlists
+- Click the download button next to any item
+- Monitor progress in the download queue
 
-## Features
+## Managing Playlists
+- Import your Spotify playlists
+- Organize, rename, or delete playlists
+- Download entire playlists with one click
 
-### 1. Music Search
-- Use the search bar to find tracks, albums, or artists
-- Click on results to view details
-- Right-click for additional options
+## Using the GUI
+- Switch between dark and light mode
+- Use the sidebar for navigation
+- Access settings for advanced options
 
-### 2. Download Management
-- Queue tracks for download
-- Monitor download progress
-- View download history
-- Set download quality preferences
-
-### 3. Playlist Management
-- Create custom playlists
-- Import Spotify playlists
-- Export playlists
-- Smart playlist features
-
-### 4. YouTube Integration
-- Search YouTube videos
-- Download audio from YouTube
-- Convert to various formats
-
-### 5. Lyrics Support
-- View synchronized lyrics
-- Save lyrics with downloads
-- Edit lyrics manually
-
-### 6. Settings and Customization
-- Change theme
-- Configure audio quality
-- Set download folder
-- Manage notifications
-
-## Keyboard Shortcuts
-
-| Shortcut | Action |
-|----------|--------|
-| Ctrl/Cmd + F | Focus search |
-| Ctrl/Cmd + Q | Clear queue |
-| Space | Play/Pause preview |
-| Esc | Clear search |
-
-## Tips and Tricks
-
-1. **Batch Downloads**
-   - Use shift-click to select multiple items
-   - Right-click to download all selected items
-
-2. **Smart Queue**
-   - Enable auto-start queue for automatic downloads
-   - Use drag and drop to reorder queue
-
-3. **Performance**
-   - Adjust concurrent downloads based on your connection
-   - Use the appropriate audio quality for your needs
+## Power User Tips
+- Use keyboard shortcuts for faster navigation
+- Customize download quality and output directory in settings
+- View download history and lyrics for your tracks
