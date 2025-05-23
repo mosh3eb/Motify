@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+        }
+        .preview {
+            width: 1280px;
+            height: 640px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(135deg, 
+                    rgba(29,185,84,0.1) 0%,
+                    rgba(29,185,84,0.05) 100%);
+            z-index: 1;
+        }
+        .waves {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+            background: repeating-linear-gradient(
+                45deg,
+                #1DB954,
+                #1DB954 10px,
+                transparent 10px,
+                transparent 20px
+            );
+        }
+        .content {
+            z-index: 2;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+        .logo-section {
+            text-align: center;
+        }
+        .icon {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, #1DB954, #169C46);
+            border-radius: 45px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .music-note {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border: 14px solid white;
+            border-radius: 50%;
+            border-bottom-right-radius: 0;
+            transform: rotate(-10deg);
+        }
+        .music-note::after {
+            content: '';
+            position: absolute;
+            bottom: -35px;
+            right: -14px;
+            width: 14px;
+            height: 55px;
+            background: white;
+        }
+        .text-content {
+            color: white;
+            text-align: left;
+        }
+        .title {
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1DB954, #169C46);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .description {
+            font-size: 24px;
+            color: #888;
+            margin-bottom: 30px;
+            max-width: 600px;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.5;
+        }
+        .features {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            max-width: 600px;
+        }
+        .feature {
+            background: rgba(29,185,84,0.1);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 16px;
+            color: #1DB954;
+        }
+    </style>
+</head>
+<body>
+    <div class="preview">
+        <div class="background"></div>
+        <div class="waves"></div>
+        <div class="content">
+            <div class="logo-section">
+                <div class="icon">
+                    <div class="music-note"></div>
+                </div>
+            </div>
+            <div class="text-content">
+                <div class="title">Motify</div>
+                <div class="description">
+                    A powerful and modern music downloader and manager application built with Python. Features a beautiful user interface and seamless Spotify integration.
+                </div>
+                <div class="features">
+                    <div class="feature">🎵 Music Downloads</div>
+                    <div class="feature">🎨 Beautiful UI</div>
+                    <div class="feature">⚡ Fast & Reliable</div>
+                    <div class="feature">🎯 Smart Playlists</div>
+                    <div class="feature">🎤 Lyrics Support</div>
+                    <div class="feature">📱 Desktop App</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

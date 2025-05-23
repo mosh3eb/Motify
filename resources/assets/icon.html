@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: transparent;
+        }
+        .icon {
+            width: 256px;
+            height: 256px;
+            background: linear-gradient(135deg, #1DB954, #169C46);
+            border-radius: 60px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 8px 30px rgba(29,185,84,0.3);
+        }
+        .music-note {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border: 18px solid white;
+            border-radius: 50%;
+            border-bottom-right-radius: 0;
+            transform: rotate(-10deg);
+        }
+        .music-note::after {
+            content: '';
+            position: absolute;
+            bottom: -45px;
+            right: -18px;
+            width: 18px;
+            height: 75px;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="icon">
+        <div class="music-note"></div>
+    </div>
+</body>
+</html>
