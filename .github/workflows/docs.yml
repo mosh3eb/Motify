@@ -7,12 +7,17 @@ on:
     paths:
       - 'docs/**'
       - '.github/workflows/docs.yml'
+      - 'mkdocs.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'docs/**'
       - '.github/workflows/docs.yml'
+      - 'mkdocs.yml'
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
@@ -31,12 +36,14 @@ jobs:
           pip install mkdocs-material mkdocs-git-revision-date-localized-plugin
           
       - name: Build documentation
-        run: mkdocs build
-        
+        run: |
+          mkdocs build
+          
       - name: Deploy to GitHub Pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
-          publish_branch: gh-pages 
+          publish_branch: gh-pages
+          commit_message: "docs: update documentation" 
