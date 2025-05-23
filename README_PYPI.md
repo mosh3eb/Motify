@@ -46,7 +46,6 @@ Visit our [documentation](https://mosh3eb.github.io/motify/) for detailed guides
 - [GitHub Repository](https://github.com/mosh3eb/motify)
 - [Documentation](https://mosh3eb.github.io/motify/)
 - [Issue Tracker](https://github.com/mosh3eb/motify/issues)
-- [PyPI Package](https://pypi.org/project/motify-music/)
 
 ## 📝 License
 
