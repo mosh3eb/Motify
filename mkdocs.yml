@@ -35,10 +35,7 @@ theme:
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil
-  font:
-    text: Roboto
-    code: Roboto Mono
-  favicon: assets/favicon.png
+  favicon: assets/images/favicon.svg
   static_templates:
     - 404.html
 
@@ -46,6 +43,7 @@ extra_css:
   - assets/stylesheets/extra.css
 extra_javascript:
   - assets/javascripts/extra.js
+  - assets/javascripts/demo.js
 
 markdown_extensions:
   - attr_list

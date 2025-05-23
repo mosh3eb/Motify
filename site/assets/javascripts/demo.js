@@ -4,6 +4,7 @@ class MotifyDemo {
         this.searchButton = document.getElementById('search-button');
         this.resultsContainer = document.getElementById('search-results');
         this.previewPlayer = document.getElementById('preview-player');
+        this.currentAudio = null;
         this.setupEventListeners();
     }
 
@@ -20,47 +21,44 @@ class MotifyDemo {
 
         this.showLoading();
         try {
-            // Simulate API call with sample data
-            const results = await this.mockSearchAPI(query);
+            const results = await this.searchSpotify(query);
             this.displayResults(results);
         } catch (error) {
+            console.error('Search error:', error);
             this.showError('Search failed. Please try again.');
         }
     }
 
-    mockSearchAPI(query) {
-        // Simulate API delay
-        return new Promise((resolve) => {
-            setTimeout(() => {
-                resolve([
-                    {
-                        id: '1',
-                        title: 'Sample Track 1',
-                        artist: 'Artist 1',
-                        previewUrl: 'https://p.scdn.co/mp3-preview/1',
-                        image: 'assets/images/screenshots/main-interface.png'
-                    },
-                    {
-                        id: '2',
-                        title: 'Sample Track 2',
-                        artist: 'Artist 2',
-                        previewUrl: 'https://p.scdn.co/mp3-preview/2',
-                        image: 'assets/images/screenshots/main-interface.png'
-                    },
-                    {
-                        id: '3',
-                        title: 'Sample Track 3',
-                        artist: 'Artist 3',
-                        previewUrl: 'https://p.scdn.co/mp3-preview/3',
-                        image: 'assets/images/screenshots/main-interface.png'
-                    }
-                ]);
-            }, 1000);
+    async searchSpotify(query) {
+        // Using Spotify's public API endpoint
+        const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=track&limit=5`, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
         });
+
+        if (!response.ok) {
+            throw new Error('Search failed');
+        }
+
+        const data = await response.json();
+        return data.tracks.items.map(track => ({
+            id: track.id,
+            title: track.name,
+            artist: track.artists.map(artist => artist.name).join(', '),
+            previewUrl: track.preview_url,
+            image: track.album.images[0]?.url || 'assets/images/screenshots/main-interface.png'
+        }));
     }
 
     displayResults(results) {
         this.resultsContainer.innerHTML = '';
+        if (results.length === 0) {
+            this.showError('No tracks found. Try a different search term.');
+            return;
+        }
+
         results.forEach(track => {
             const trackElement = this.createTrackElement(track);
             this.resultsContainer.appendChild(trackElement);
@@ -77,7 +75,7 @@ class MotifyDemo {
                 <p>${track.artist}</p>
             </div>
             <div class="track-actions">
-                <button class="preview-button" onclick="motifyDemo.previewTrack('${track.id}')">
+                <button class="preview-button" onclick="motifyDemo.previewTrack('${track.id}', '${track.previewUrl}', '${track.title}')">
                     <span class="demo-icon">▶️</span> Preview
                 </button>
                 <button class="download-button" onclick="motifyDemo.showUpgradeMessage()">
@@ -88,9 +86,38 @@ class MotifyDemo {
         return div;
     }
 
-    previewTrack(trackId) {
-        // In the full version, this would play the actual preview
-        this.showMessage('Playing preview... (Demo Mode)');
+    previewTrack(trackId, previewUrl, title) {
+        if (this.currentAudio) {
+            this.currentAudio.pause();
+            this.currentAudio = null;
+        }
+
+        if (!previewUrl) {
+            this.showMessage('Preview not available for this track');
+            return;
+        }
+
+        // Create audio player if it doesn't exist
+        if (!this.previewPlayer.querySelector('audio')) {
+            const audio = document.createElement('audio');
+            audio.controls = true;
+            audio.className = 'preview-audio';
+            this.previewPlayer.innerHTML = '';
+            this.previewPlayer.appendChild(audio);
+        }
+
+        const audio = this.previewPlayer.querySelector('audio');
+        audio.src = previewUrl;
+        audio.play();
+        this.currentAudio = audio;
+
+        // Add track info
+        const trackInfo = document.createElement('div');
+        trackInfo.className = 'preview-info';
+        trackInfo.innerHTML = `<h4>Now Playing: ${title}</h4>`;
+        this.previewPlayer.appendChild(trackInfo);
+
+        this.showMessage('Playing preview...');
     }
 
     showUpgradeMessage() {

@@ -193,6 +193,30 @@ Try the demo on your mobile device to experience the responsive design!
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+.preview-player {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: var(--md-default-bg-color);
+  border-radius: var(--md-card-radius);
+  text-align: center;
+}
+
+.preview-audio {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.preview-info {
+  margin-top: 1rem;
+  color: var(--md-primary-fg-color);
+}
+
+.preview-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
 .demo-icon {
   font-size: 1.2rem;
 }
@@ -258,6 +282,10 @@ Try the demo on your mobile device to experience the responsive design!
   .track-actions {
     width: 100%;
     justify-content: center;
+  }
+  
+  .preview-audio {
+    width: 100%;
   }
 }
 </style> 
