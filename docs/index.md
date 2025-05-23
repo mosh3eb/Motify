@@ -2,162 +2,91 @@
 
 Motify is a modern, open-source Spotify music downloader and manager with a beautiful GUI, advanced playlist features, and high-quality audio support.
 
----
+## 🚀 Key Features
 
-## 🚀 What Makes Motify Special?
-- **Modern, intuitive interface** with dark mode and custom theming
-- **Playlist management** and download queue
-- **Lyrics integration** and download history
-- **Fast, reliable, and open-source**
+<div class="grid feature-cards" markdown>
 
----
+### 🎵 High Quality Audio
+Download music from Spotify with premium audio quality and metadata
 
-## 📖 Quick Navigation
-- [Installation Guide](installation.md)
-- [User Guide](usage.md)
-- [Features](features.md)
-- [API Reference](api.md)
-- [Troubleshooting & FAQ](troubleshooting.md)
-- [Contributing](contributing.md)
+### 🎨 Modern Interface
+Intuitive and beautiful graphical user interface with dark mode support
 
----
+### 📱 Playlist Management
+Organize and manage your playlists with an efficient queue system
 
-> **Tip:** Use the sidebar or search to quickly find what you need!
-
----
-
-## 🖼️ Screenshots
-
-<div class="grid cards" markdown>
-
-- ![Main Interface](assets/images/screenshots/1.png){ loading=lazy }
-  **Main Interface**
-  {: .image-caption }
-
-- ![Playlist Management](assets/images/screenshots/2.png){ loading=lazy }
-  **Playlist Management**
-  {: .image-caption }
-
-- ![Download Queue](assets/images/screenshots/3.png){ loading=lazy }
-  **Download Queue**
-  {: .image-caption }
-
-- ![Lyrics Support](assets/images/screenshots/4.png){ loading=lazy }
-  **Lyrics Support**
-  {: .image-caption }
-
-- ![History](assets/images/screenshots/5.png){ loading=lazy }
-  **History**
-  {: .image-caption }
-
-- ![Settings](assets/images/screenshots/6.png){ loading=lazy }
-  **Settings**
-  {: .image-caption }
-
-- ![Statistics](assets/images/screenshots/7.png){ loading=lazy }
-  **Statistics**
-  {: .image-caption }
+### 📊 Download History
+Track your downloads with detailed statistics and history
 
 </div>
 
-<style>
-.grid.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
-}
+## 🖼️ Screenshots
 
-.grid.cards > * {
-    border: 1px solid rgba(128, 128, 128, 0.1);
-    border-radius: 8px;
-    padding: 0.5rem;
-    text-align: center;
-}
+<div class="grid screenshots" markdown>
 
-.grid.cards img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+![Main Interface](assets/images/screenshots/1.png){: loading=lazy }
+*Clean and intuitive main interface*
+{: .image-caption }
 
-.image-caption {
-    font-size: 1.1em;
-    font-weight: 500;
-    margin-top: 0.5rem;
-}
-</style>
+![Playlist Management](assets/images/screenshots/2.png){: loading=lazy }
+*Advanced playlist management*
+{: .image-caption }
 
----
+![Download Queue](assets/images/screenshots/3.png){: loading=lazy }
+*Efficient download queue system*
+{: .image-caption }
 
-## 💡 Why use Motify?
-Motify is designed for music lovers who want a seamless, powerful, and beautiful way to manage and download their Spotify music collections. Whether you're a casual listener or a power user, Motify has you covered.
+![Lyrics Support](assets/images/screenshots/4.png){: loading=lazy }
+*Built-in lyrics support*
+{: .image-caption }
 
----
+![History](assets/images/screenshots/5.png){: loading=lazy }
+*Detailed download history*
+{: .image-caption }
 
-## 🛠️ Get Started
-- [Installation Guide](installation.md)
-- [User Guide](usage.md)
+![Settings](assets/images/screenshots/6.png){: loading=lazy }
+*Customizable settings*
+{: .image-caption }
 
----
+![Statistics](assets/images/screenshots/7.png){: loading=lazy }
+*Usage statistics and insights*
+{: .image-caption }
 
-## 🤝 Community & Support
-- [GitHub Issues](https://github.com/mosh3eb/motify/issues)
-- [Discord](https://discord.gg/motify)
+</div>
 
-## Documentation Sections
+## 📚 Quick Links
 
-### User Guides
-- **Installation**: Detailed instructions for setting up Motify on different platforms.
-- **User Interface**: Explore the modern, intuitive GUI and its features.
-- **Playlist Management**: Learn how to manage and download playlists efficiently.
-- **Download History**: Track your downloads and view statistics.
+<div class="grid quick-links" markdown>
 
-### Technical Documentation
-- **API Overview**: Understand the core components and how they interact.
-- **Configuration**: Customize Motify to suit your needs.
-- **Advanced Usage**: Tips and tricks for power users.
+- [📥 Installation Guide](installation.md)
+  Get started with Motify in minutes
+  {: .link-description }
 
-## Key Features
+- [📖 User Guide](usage.md)
+  Learn how to use Motify effectively
+  {: .link-description }
 
-- **Music Download**: Download high-quality audio from Spotify.
-- **Playlist Management**: Organize and download entire playlists with ease.
-- **User Interface**: Modern, responsive design for a seamless experience.
-- **Advanced Features**: Lyrics integration, download history, and more.
+- [🛠️ API Reference](api.md)
+  Integrate Motify into your projects
+  {: .link-description }
 
-## Examples
+- [❓ Troubleshooting](troubleshooting.md)
+  Find solutions to common issues
+  {: .link-description }
 
-### Basic Usage
-```python
-from motify import Motify
+</div>
 
-# Initialize Motify
-motify = Motify()
+## 💡 Getting Started
 
-# Download a track
-motify.download_track("track_id")
+```bash
+# Install Motify
+pip install motify-music
+
+# Run Motify
+motify
 ```
 
-### Advanced Configuration
-```python
-from motify import Motify, Config
-
-# Custom configuration
-config = Config(
-    output_dir="custom/path",
-    quality="high"
-)
-
-# Initialize with custom config
-motify = Motify(config)
-```
-
-## Support
-
-For issues, feature requests, or contributions, visit our [GitHub repository](https://github.com/mosh3eb/motify).
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE on GitHub](https://github.com/mosh3eb/motify/blob/main/LICENSE) for details.
+<div class="cta-buttons" markdown>
+[Get Started →](installation.md){ .md-button .md-button--primary }
+[View on GitHub](https://github.com/mosh3eb/motify){ .md-button }
+</div>

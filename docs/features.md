@@ -1,59 +1,79 @@
-# Features Overview
+# Feature Overview
 
-Motify comes with a rich set of features designed to make your music downloading experience smooth and enjoyable.
+<div class="feature-grid" markdown>
 
-## 🎵 Main Interface
-![Main Interface](assets/images/screenshots/1.png)
+## 🎵 Music Download
 
-- Clean and modern user interface
-- Easy-to-use search functionality
-- Quick access to all features
-- Real-time progress updates
+- High-quality audio downloads from Spotify
+- Automatic metadata and artwork
+- Multiple format support (MP3/FLAC)
+- Batch download capabilities
 
 ## 📱 Playlist Management
+
+- Import Spotify playlists
+- Create and organize local playlists
+- Smart queue system
+- Drag and drop support
+
+## 🎸 Lyrics Integration
+
+- Real-time lyrics display
+- Synced lyrics support
+- Multiple lyrics sources
+- Save lyrics with downloads
+
+## 📊 History & Stats
+
+- Detailed download history
+- Usage statistics
+- Data visualization
+- Export capabilities
+
+</div>
+
+## Detailed Features
+
+### Music Download
+
+<div class="feature-details" markdown>
+![Download Interface](assets/images/screenshots/1.png)
+
+- **High-Quality Audio**: Download tracks in up to 320kbps MP3 or lossless FLAC
+- **Smart Queue**: Efficient download management with pause/resume
+- **Metadata**: Automatic tagging with album art, titles, and artist info
+- **Format Options**: Choose between different quality and format options
+</div>
+
+### Playlist Management
+
+<div class="feature-details" markdown>
 ![Playlist Management](assets/images/screenshots/2.png)
 
-- Import playlists from Spotify
-- Organize your music collection
-- Batch download support
-- Smart playlist sorting
+- **Import**: Easily import your Spotify playlists
+- **Organize**: Create, edit, and manage local playlists
+- **Queue**: Add entire playlists to download queue
+- **Sync**: Keep your playlists up to date
+</div>
 
-## ⚡ Download Queue
-![Download Queue](assets/images/screenshots/3.png)
+### Lyrics Support
 
-- Parallel download support
-- Progress tracking
-- Priority management
-- Cancel and pause support
+<div class="feature-details" markdown>
+![Lyrics Support](assets/images/screenshots/4.png)
 
-## 🎸 Lyrics Support
-![Lyrics Tab](assets/images/screenshots/4.png)
+- **Real-time Display**: View lyrics while downloading
+- **Multiple Sources**: Get lyrics from various providers
+- **Save Options**: Include lyrics in downloaded files
+- **Search**: Find and correct lyrics manually
+</div>
 
-- Automatic lyrics fetching
-- Synchronized lyrics support
-- Multiple lyrics sources
-- Easy copy and export
+### History & Statistics
 
-## 📊 History
-![History Tab](assets/images/screenshots/5.png)
+<div class="feature-details" markdown>
+![History View](assets/images/screenshots/5.png)
 
-- Complete download history
-- Search and filter options
-- Export capabilities
-- Quick re-download option
-
-## ⚙️ Settings
-![Settings Tab](assets/images/screenshots/6.png)
-
-- Customizable download options
-- Audio quality settings
-- Directory management
-- Theme customization
-
-## 📈 Statistics
-![Stats Tab](assets/images/screenshots/7.png)
-
-- Download statistics
-- Usage analytics
-- Performance metrics
-- Visual data representation
+- **Download History**: View all past downloads
+- **Usage Stats**: Track your download patterns
+- **Data Export**: Export history in various formats
+- **Insights**: Get usage insights and recommendations
+</div>

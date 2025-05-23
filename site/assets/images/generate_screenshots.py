@@ -25,19 +25,10 @@ def create_placeholder_image(filename, title, size=(800, 600), bg_color=(33, 33,
     # Save the image
     img.save(filename)
 
-# Create the screenshots directory if it doesn't exist
-os.makedirs('docs/assets/images/screenshots', exist_ok=True)
+# Create the images directory if it doesn't exist
+os.makedirs('docs/assets/images', exist_ok=True)
 
-# Generate all required screenshots
-screenshots = [
-    ('1.png', 'Clean and intuitive main interface'),
-    ('2.png', 'Advanced playlist management'),
-    ('3.png', 'Efficient download queue system'),
-    ('4.png', 'Built-in lyrics support'),
-    ('5.png', 'Detailed download history'),
-    ('6.png', 'Customizable settings'),
-    ('7.png', 'Usage statistics and insights')
-]
-
-for filename, title in screenshots:
-    create_placeholder_image(f'docs/assets/images/screenshots/{filename}', title) 
+# Generate placeholder screenshots
+create_placeholder_image('docs/assets/images/main-interface.png', 'Main Interface')
+create_placeholder_image('docs/assets/images/playlist-management.png', 'Playlist Management')
+create_placeholder_image('docs/assets/images/download-queue.png', 'Download Queue') 
