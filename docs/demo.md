@@ -1,6 +1,6 @@
 # Try Motify Demo
 
-Experience the power of Motify with our interactive demo. Search for tracks, preview them, and see how easy it is to manage your Spotify music.
+Experience the power of Motify with our interactive demo. Search for tracks and see how easy it is to manage your Spotify music.
 
 ## 🎵 Live Demo
 
@@ -23,25 +23,28 @@ Experience the power of Motify with our interactive demo. Search for tracks, pre
   </div>
 </div>
 
-## ✨ Features Available in Demo
+## ✨ Demo Features
 
 <div class="grid features" markdown>
 
 ### 🔍 Search Tracks
-- Real-time search
-- Track previews
-- Artist information
-- Album artwork
+- Search by track name or artist
+- View track information
+- See album artwork
+- Sample tracks available:
+  - Shape of You - Ed Sheeran
+  - Blinding Lights - The Weeknd
+  - Dance Monkey - Tones and I
 
 ### 🎵 Preview Music
-- 30-second previews
-- High-quality audio
-- Instant playback
-- Track information
+- Click preview button to see how it works
+- View track details
+- See album artwork
 
 ### ⬇️ Download (Full Version)
-- One-click download
-- Batch processing
+- Get the full version to download tracks
+- Download entire albums
+- Download playlists
 - High-quality audio
 - Metadata support
 

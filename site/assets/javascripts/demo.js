@@ -47,33 +47,46 @@ class MotifyDemo {
 
         this.showLoading();
         try {
-            // For demo purposes, we'll use mock data instead of the Spotify API
-            const mockResults = this.getMockResults(query);
-            this.displayResults(mockResults);
+            // For demo purposes, we'll use a limited set of sample tracks
+            const results = this.getSampleTracks(query);
+            this.displayResults(results);
         } catch (error) {
             console.error('Search error:', error);
             this.showError('Search failed. Please try again.');
         }
     }
 
-    getMockResults(query) {
-        // Mock data for demonstration
-        return [
+    getSampleTracks(query) {
+        // Sample tracks that match the search query
+        const allTracks = [
             {
                 id: '1',
-                title: 'Sample Track 1',
-                artist: 'Artist 1',
+                title: 'Shape of You',
+                artist: 'Ed Sheeran',
                 previewUrl: 'https://p.scdn.co/mp3-preview/1',
-                image: 'https://i.scdn.co/image/ab67616d0000b273'
+                image: 'https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96'
             },
             {
                 id: '2',
-                title: 'Sample Track 2',
-                artist: 'Artist 2',
+                title: 'Blinding Lights',
+                artist: 'The Weeknd',
                 previewUrl: 'https://p.scdn.co/mp3-preview/2',
-                image: 'https://i.scdn.co/image/ab67616d0000b273'
+                image: 'https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36'
+            },
+            {
+                id: '3',
+                title: 'Dance Monkey',
+                artist: 'Tones and I',
+                previewUrl: 'https://p.scdn.co/mp3-preview/3',
+                image: 'https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f5'
             }
         ];
+
+        // Filter tracks based on search query
+        return allTracks.filter(track => 
+            track.title.toLowerCase().includes(query.toLowerCase()) ||
+            track.artist.toLowerCase().includes(query.toLowerCase())
+        );
     }
 
     displayResults(results) {
