@@ -1,22 +1,68 @@
 site_name: Motify
-site_url: https://mosh3eb.github.io/motify
+site_description: A modern Python-based Spotify Music Downloader
+site_author: Mosh3eb
+repo_name: mosh3eb/motify
 repo_url: https://github.com/mosh3eb/motify
-theme: material
+edit_uri: edit/main/docs/
 
-nav:
-  - Home: index.md
-  - Installation: installation.md
-  - Usage Guide: usage.md
-  - Configuration: configuration.md
-  - API Reference: api.md
-  - Contributing: contributing.md
-  - Changelog: changelog.md
+theme:
+  name: material
+  palette:
+    primary: green
+    accent: green
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
 
 markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - admonition
-  - codehilite
+  - footnotes
   - toc:
       permalink: true
 
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installation: installation.md
+    - Quick Start: usage.md
+  - Features:
+    - Playlist Management: features/playlist.md
+    - Download History: features/history.md
+    - Lyrics Support: features/lyrics.md
+  - API Reference:
+    - Overview: api.md
+    - Configuration: api/configuration.md
+    - Spotify Service: api/spotify.md
+    - Download Service: api/downloader.md
+  - Development:
+    - Contributing: contributing.md
+    - Changelog: changelog.md
+
 plugins:
   - search
+  - social
+  - tags
+  - git-revision-date-localized
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mosh3eb/motify
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/motify-music/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/mosh3eb
