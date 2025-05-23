@@ -1,10 +1,8 @@
 <div align="center">
-  <img src="resources/assets/cover.png" alt="Motify Cover" width="100%">
+  <img src="resources/Cover.jpg" alt="Motify Cover" width="100%">
   
   <br>
   <br>
-
-  <img src="resources/assets/logo.png" alt="Motify Logo" width="150px">
 
   # Motify
 
@@ -14,10 +12,6 @@
   [![License](https://img.shields.io/github/license/mosh3eb/motify?color=1DB954&style=for-the-badge)](LICENSE)
   [![Python](https://img.shields.io/badge/python-3.10+-1DB954?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
   [![Stars](https://img.shields.io/github/stars/mosh3eb/motify?color=1DB954&style=for-the-badge)](https://github.com/mosh3eb/motify/stargazers)
-
-  <br>
-  
-  <img src="Screen%20Shot%202025-04-14%20at%2000.22.53%20AM.png" alt="Motify Interface" width="80%">
 </div>
 
 ## ✨ Features
