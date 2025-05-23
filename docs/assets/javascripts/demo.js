@@ -79,21 +79,64 @@ class MotifyDemo {
                 title: 'Shape of You',
                 artist: 'Ed Sheeran',
                 previewUrl: 'https://p.scdn.co/mp3-preview/1',
-                image: 'https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96'
+                image: 'https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96',
+                demoUrl: 'https://files.catbox.moe/8u0j1p.mp3' // Low quality demo version
             },
             {
                 id: '2',
                 title: 'Blinding Lights',
                 artist: 'The Weeknd',
                 previewUrl: 'https://p.scdn.co/mp3-preview/2',
-                image: 'https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36'
+                image: 'https://i.scdn.co/image/ab67616d0000b2738863bc11d2aa12b54f5aeb36',
+                demoUrl: 'https://files.catbox.moe/8u0j1p.mp3'
             },
             {
                 id: '3',
                 title: 'Dance Monkey',
                 artist: 'Tones and I',
                 previewUrl: 'https://p.scdn.co/mp3-preview/3',
-                image: 'https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f5'
+                image: 'https://i.scdn.co/image/ab67616d0000b2732e8ed79e177ff6011076f5f5',
+                demoUrl: 'https://files.catbox.moe/8u0j1p.mp3'
+            },
+            {
+                id: '4',
+                title: 'Bad Guy',
+                artist: 'Billie Eilish',
+                previewUrl: 'https://p.scdn.co/mp3-preview/4',
+                image: 'https://i.scdn.co/image/ab67616d0000b2732a038d3bf875d23e4aeaa84e',
+                demoUrl: 'https://files.catbox.moe/8u0j1p.mp3'
+            },
+            {
+                id: '5',
+                title: 'Uptown Funk',
+                artist: 'Mark Ronson ft. Bruno Mars',
+                previewUrl: 'https://p.scdn.co/mp3-preview/5',
+                image: 'https://i.scdn.co/image/ab67616d0000b273a108e07c661f9fc54de9c43a',
+                demoUrl: 'https://files.catbox.moe/8u0j1p.mp3'
+            },
+            {
+                id: '6',
+                title: 'Someone You Loved',
+                artist: 'Lewis Capaldi',
+                previewUrl: 'https://p.scdn.co/mp3-preview/6',
+                image: 'https://i.scdn.co/image/ab67616d0000b273c6f7af36bcd24f7c5f3c0d4a',
+                demoUrl: 'https://files.catbox.moe/8u0j1p.mp3'
+            },
+            {
+                id: '7',
+                title: 'Don\'t Start Now',
+                artist: 'Dua Lipa',
+                previewUrl: 'https://p.scdn.co/mp3-preview/7',
+                image: 'https://i.scdn.co/image/ab67616d0000b273f0a13ebc5b2b9ecc8f3a9e0c',
+                demoUrl: 'https://files.catbox.moe/8u0j1p.mp3'
+            },
+            {
+                id: '8',
+                title: 'Watermelon Sugar',
+                artist: 'Harry Styles',
+                previewUrl: 'https://p.scdn.co/mp3-preview/8',
+                image: 'https://i.scdn.co/image/ab67616d0000b273e2e352d5e8576e1f7a1a0d4c',
+                demoUrl: 'https://files.catbox.moe/8u0j1p.mp3'
             }
         ];
 
@@ -135,10 +178,10 @@ class MotifyDemo {
                 <p>${track.artist}</p>
             </div>
             <div class="track-actions">
-                <button class="preview-button" onclick="motifyDemo.previewTrack('${track.id}', '${track.previewUrl}', '${track.title}')">
+                <button class="preview-button" onclick="motifyDemo.previewTrack('${track.id}', '${track.demoUrl}', '${track.title}')">
                     <span class="demo-icon">▶️</span> Preview
                 </button>
-                <button class="download-button" onclick="motifyDemo.showUpgradeMessage()">
+                <button class="download-button" onclick="motifyDemo.downloadTrack('${track.id}', '${track.demoUrl}', '${track.title}', '${track.artist}')">
                     <span class="demo-icon">⬇️</span> Download
                 </button>
             </div>
@@ -180,9 +223,24 @@ class MotifyDemo {
         this.showMessage('Playing preview...');
     }
 
-    showUpgradeMessage() {
-        console.log('Showing upgrade message');
-        this.showMessage('Upgrade to full version to download tracks!');
+    downloadTrack(trackId, demoUrl, title, artist) {
+        console.log('Downloading track:', { trackId, title, artist });
+        
+        // Create a temporary link element
+        const link = document.createElement('a');
+        link.href = demoUrl;
+        link.download = `${artist} - ${title}.mp3`;
+        
+        // Add link to document
+        document.body.appendChild(link);
+        
+        // Trigger download
+        link.click();
+        
+        // Clean up
+        document.body.removeChild(link);
+        
+        this.showMessage('Downloading demo version (128kbps)...');
     }
 
     showMessage(message) {

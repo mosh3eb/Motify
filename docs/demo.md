@@ -1,6 +1,6 @@
 # Try Motify Demo
 
-Experience the power of Motify with our interactive demo. Search for tracks and see how easy it is to manage your Spotify music.
+Experience the power of Motify with our interactive demo. Search for tracks, preview them, and download demo versions.
 
 ## 🎵 Live Demo
 
@@ -42,18 +42,25 @@ console.log('Demo page loaded');
   - Shape of You - Ed Sheeran
   - Blinding Lights - The Weeknd
   - Dance Monkey - Tones and I
+  - Bad Guy - Billie Eilish
+  - Uptown Funk - Mark Ronson ft. Bruno Mars
+  - Someone You Loved - Lewis Capaldi
+  - Don't Start Now - Dua Lipa
+  - Watermelon Sugar - Harry Styles
 
 ### 🎵 Preview Music
-- Click preview button to see how it works
+- Click preview button to play demo version
 - View track details
 - See album artwork
+- 30-second previews
 
-### ⬇️ Download (Full Version)
-- Get the full version to download tracks
-- Download entire albums
-- Download playlists
-- High-quality audio
-- Metadata support
+### ⬇️ Download (Demo Version)
+- Download tracks in demo quality (128kbps)
+- Get the full version for:
+  - High-quality audio (320kbps)
+  - Download entire albums
+  - Download playlists
+  - Metadata support
 
 </div>
 
