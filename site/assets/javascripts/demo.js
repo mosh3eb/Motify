@@ -5,55 +5,81 @@ class MotifyDemo {
         this.resultsContainer = document.getElementById('search-results');
         this.previewPlayer = document.getElementById('preview-player');
         this.currentAudio = null;
+        
+        // Debug log
+        console.log('MotifyDemo initialized');
+        
+        if (!this.searchInput || !this.searchButton || !this.resultsContainer) {
+            console.error('Required elements not found:', {
+                searchInput: !!this.searchInput,
+                searchButton: !!this.searchButton,
+                resultsContainer: !!this.resultsContainer
+            });
+            return;
+        }
+        
         this.setupEventListeners();
     }
 
     setupEventListeners() {
-        this.searchButton.addEventListener('click', () => this.searchTracks());
+        console.log('Setting up event listeners');
+        this.searchButton.addEventListener('click', () => {
+            console.log('Search button clicked');
+            this.searchTracks();
+        });
+        
         this.searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') this.searchTracks();
+            if (e.key === 'Enter') {
+                console.log('Enter key pressed');
+                this.searchTracks();
+            }
         });
     }
 
     async searchTracks() {
         const query = this.searchInput.value.trim();
-        if (!query) return;
+        console.log('Searching for:', query);
+        
+        if (!query) {
+            this.showMessage('Please enter a search term');
+            return;
+        }
 
         this.showLoading();
         try {
-            const results = await this.searchSpotify(query);
-            this.displayResults(results);
+            // For demo purposes, we'll use mock data instead of the Spotify API
+            const mockResults = this.getMockResults(query);
+            this.displayResults(mockResults);
         } catch (error) {
             console.error('Search error:', error);
             this.showError('Search failed. Please try again.');
         }
     }
 
-    async searchSpotify(query) {
-        // Using Spotify's public API endpoint
-        const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=track&limit=5`, {
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
+    getMockResults(query) {
+        // Mock data for demonstration
+        return [
+            {
+                id: '1',
+                title: 'Sample Track 1',
+                artist: 'Artist 1',
+                previewUrl: 'https://p.scdn.co/mp3-preview/1',
+                image: 'https://i.scdn.co/image/ab67616d0000b273'
+            },
+            {
+                id: '2',
+                title: 'Sample Track 2',
+                artist: 'Artist 2',
+                previewUrl: 'https://p.scdn.co/mp3-preview/2',
+                image: 'https://i.scdn.co/image/ab67616d0000b273'
             }
-        });
-
-        if (!response.ok) {
-            throw new Error('Search failed');
-        }
-
-        const data = await response.json();
-        return data.tracks.items.map(track => ({
-            id: track.id,
-            title: track.name,
-            artist: track.artists.map(artist => artist.name).join(', '),
-            previewUrl: track.preview_url,
-            image: track.album.images[0]?.url || 'assets/images/screenshots/main-interface.png'
-        }));
+        ];
     }
 
     displayResults(results) {
+        console.log('Displaying results:', results);
         this.resultsContainer.innerHTML = '';
+        
         if (results.length === 0) {
             this.showError('No tracks found. Try a different search term.');
             return;
@@ -87,14 +113,11 @@ class MotifyDemo {
     }
 
     previewTrack(trackId, previewUrl, title) {
+        console.log('Previewing track:', { trackId, title });
+        
         if (this.currentAudio) {
             this.currentAudio.pause();
             this.currentAudio = null;
-        }
-
-        if (!previewUrl) {
-            this.showMessage('Preview not available for this track');
-            return;
         }
 
         // Create audio player if it doesn't exist
@@ -108,7 +131,10 @@ class MotifyDemo {
 
         const audio = this.previewPlayer.querySelector('audio');
         audio.src = previewUrl;
-        audio.play();
+        audio.play().catch(error => {
+            console.error('Error playing audio:', error);
+            this.showMessage('Preview not available for this track');
+        });
         this.currentAudio = audio;
 
         // Add track info
@@ -125,6 +151,7 @@ class MotifyDemo {
     }
 
     showMessage(message) {
+        console.log('Showing message:', message);
         const messageElement = document.createElement('div');
         messageElement.className = 'demo-message';
         messageElement.textContent = message;
@@ -146,5 +173,6 @@ class MotifyDemo {
 
 // Initialize the demo when the page loads
 window.addEventListener('load', () => {
+    console.log('Page loaded, initializing MotifyDemo');
     window.motifyDemo = new MotifyDemo();
 }); 

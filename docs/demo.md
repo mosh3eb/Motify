@@ -71,7 +71,7 @@ motify
 
 Try the demo on your mobile device to experience the responsive design!
 
-<script src="../../site/assets/javascripts/demo.js"></script>
+<script src="../site/assets/javascripts/demo.js"></script>
 
 <style>
 .demo-container {
