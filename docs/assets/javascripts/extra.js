@@ -8,28 +8,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Add copy button to code blocks
-document.querySelectorAll('pre code').forEach((block) => {
-  const button = document.createElement('button');
-  button.className = 'copy-button';
-  button.textContent = 'Copy';
-  
-  block.parentNode.style.position = 'relative';
-  block.parentNode.appendChild(button);
-  
-  button.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(block.textContent);
-      button.textContent = 'Copied!';
-      setTimeout(() => {
-        button.textContent = 'Copy';
-      }, 2000);
-    } catch (err) {
-      console.error('Failed to copy text: ', err);
-    }
-  });
-});
-
 // Add animation to admonitions
 document.querySelectorAll('.admonition').forEach((admonition) => {
   admonition.style.opacity = '0';
@@ -115,21 +93,6 @@ if (toc) {
     observer.observe(heading);
   });
 }
-
-// Add code block line numbers
-document.querySelectorAll('pre code').forEach((block) => {
-  const lines = block.textContent.split('\n');
-  const lineNumbers = document.createElement('div');
-  lineNumbers.className = 'line-numbers';
-  
-  lines.forEach((_, i) => {
-    const lineNumber = document.createElement('span');
-    lineNumber.textContent = i + 1;
-    lineNumbers.appendChild(lineNumber);
-  });
-  
-  block.parentNode.insertBefore(lineNumbers, block);
-});
 
 // Add mobile menu animation
 const mobileMenuButton = document.querySelector('.md-header__button');

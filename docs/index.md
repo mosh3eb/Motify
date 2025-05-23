@@ -4,8 +4,6 @@ Motify is a modern, open-source Spotify music downloader and manager with a beau
 
 ## 🚀 Key Features
 
-<div class="grid feature-cards" markdown>
-
 ### 🎵 High Quality Audio
 Download music from Spotify with premium audio quality and metadata
 
@@ -18,63 +16,42 @@ Organize and manage your playlists with an efficient queue system
 ### 📊 Download History
 Track your downloads with detailed statistics and history
 
-</div>
-
 ## 🖼️ Screenshots
 
-<div class="grid screenshots" markdown>
-
-![Main Interface](assets/images/screenshots/1.png){: loading=lazy }
+![Main Interface](../assets/images/screenshots/main-interface.png)
 *Clean and intuitive main interface*
-{: .image-caption }
 
-![Playlist Management](assets/images/screenshots/2.png){: loading=lazy }
+![Playlist Management](../assets/images/screenshots/playlist-management.png)
 *Advanced playlist management*
-{: .image-caption }
 
-![Download Queue](assets/images/screenshots/3.png){: loading=lazy }
+![Download Queue](../assets/images/screenshots/download-queue.png)
 *Efficient download queue system*
-{: .image-caption }
 
-![Lyrics Support](assets/images/screenshots/4.png){: loading=lazy }
+![Lyrics Support](../assets/images/screenshots/lyrics-support.png)
 *Built-in lyrics support*
-{: .image-caption }
 
-![History](assets/images/screenshots/5.png){: loading=lazy }
+![History](../assets/images/screenshots/history.png)
 *Detailed download history*
-{: .image-caption }
 
-![Settings](assets/images/screenshots/6.png){: loading=lazy }
+![Settings](../assets/images/screenshots/settings.png)
 *Customizable settings*
-{: .image-caption }
 
-![Statistics](assets/images/screenshots/7.png){: loading=lazy }
+![Statistics](../assets/images/screenshots/statistics.png)
 *Usage statistics and insights*
-{: .image-caption }
-
-</div>
 
 ## 📚 Quick Links
 
-<div class="grid quick-links" markdown>
-
 - [📥 Installation Guide](installation.md)
   Get started with Motify in minutes
-  {: .link-description }
 
 - [📖 User Guide](usage.md)
   Learn how to use Motify effectively
-  {: .link-description }
 
 - [🛠️ API Reference](api.md)
   Integrate Motify into your projects
-  {: .link-description }
 
 - [❓ Troubleshooting](troubleshooting.md)
   Find solutions to common issues
-  {: .link-description }
-
-</div>
 
 ## 💡 Getting Started
 
@@ -86,7 +63,5 @@ pip install motify-music
 motify
 ```
 
-<div class="cta-buttons" markdown>
 [Get Started →](installation.md){ .md-button .md-button--primary }
 [View on GitHub](https://github.com/mosh3eb/motify){ .md-button }
-</div>

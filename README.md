@@ -44,19 +44,19 @@ Visit our [documentation](https://mosh3eb.github.io/motify/) for detailed guides
 ## 🖼️ Screenshots
 
 <div align="center">
-  <img src="resources/1.png" alt="Main Interface" width="80%">
+  <img src="docs/assets/images/screenshots/1.png" alt="Main Interface" width="80%">
   <br><br>
-  <img src="resources/2.png" alt="Playlist Management" width="80%">
+  <img src="docs/assets/images/screenshots/2.png" alt="Playlist Management" width="80%">
   <br><br>
-  <img src="resources/3.png" alt="Download Queue" width="80%">
+  <img src="docs/assets/images/screenshots/3.png" alt="Download Queue" width="80%">
   <br><br>
-  <img src="resources/4.png" alt="Lyrics Tab" width="80%">
+  <img src="docs/assets/images/screenshots/4.png" alt="Lyrics Tab" width="80%">
   <br><br>
-  <img src="resources/5.png" alt="History Tab" width="80%">
+  <img src="docs/assets/images/screenshots/5.png" alt="History Tab" width="80%">
   <br><br>
-  <img src="resources/6.png" alt="Settings Tab" width="80%">
+  <img src="docs/assets/images/screenshots/6.png" alt="Settings Tab" width="80%">
   <br><br>
-  <img src="resources/7.png" alt="Stats Tab" width="80%">
+  <img src="docs/assets/images/screenshots/7.png" alt="Stats Tab" width="80%">
 </div>
 
 ## 🔗 Links

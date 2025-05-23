@@ -384,21 +384,20 @@ pre {
 .highlight pre {
   margin: 0;
   padding: 1rem;
-  padding-right: 4.5rem;
+  padding-right: 4rem;
   position: relative;
 }
 
 /* Copy Button Container */
 .md-clipboard {
   position: absolute;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
-  top: 0.35rem !important;
-  right: 0.35rem !important;
-  height: 1.5rem !important;
-  padding: 0.25rem 0.5rem !important;
+  top: 0.5rem;
+  right: 0.5rem;
+  height: 1.5rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 0.2rem;
   background-color: var(--md-default-bg-color--light);
   color: var(--md-default-fg-color--light);
@@ -406,6 +405,9 @@ pre {
   font-weight: 500;
   z-index: 2;
   transition: all 0.2s ease;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 /* Copy Button Icon */
@@ -416,19 +418,71 @@ pre {
   background-color: currentColor;
   -webkit-mask-image: var(--md-clipboard-icon);
   mask-image: var(--md-clipboard-icon);
+  display: inline-block;
+  margin-right: 0.25rem;
+  vertical-align: middle;
 }
 
 /* Copy Button Text */
 .md-clipboard::after {
   content: "copy";
-  line-height: 1;
+  display: inline-block;
   vertical-align: middle;
+  line-height: 1;
+  font-size: 0.65rem;
 }
 
 /* Copy Button Hover */
 .md-clipboard:hover {
   background-color: var(--md-accent-fg-color--transparent);
   color: var(--md-accent-fg-color);
+}
+
+/* Remove duplicate copy button */
+.copy-button {
+  display: none !important;
+}
+
+/* Code Block Container */
+.md-typeset pre {
+  position: relative;
+  padding-top: 2.5rem;
+}
+
+.md-typeset pre > code {
+  padding: 1rem;
+}
+
+/* Code Block Language Label */
+.md-typeset .highlight .language {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  text-transform: uppercase;
+}
+
+/* Code Block Wrapper */
+.highlight {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.highlight pre {
+  margin: 0;
+  padding: 1rem;
+  padding-right: 3.5rem;
+}
+
+/* Copy Button Active State */
+.md-clipboard:active::before {
+  display: none;
+}
+
+.md-clipboard:active::after {
+  content: "copied!";
+  color: var(--md-primary-fg-color);
 }
 
 /* Feature Titles - Global Styles */
