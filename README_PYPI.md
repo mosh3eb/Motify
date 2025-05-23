@@ -36,15 +36,15 @@ pip install motify-music
 
 ## 📚 Documentation
 
-Visit our [documentation](https://mosh3eb.github.io/motify/) for detailed guides on:
-- [Installation](https://mosh3eb.github.io/motify/installation)
-- [Usage](https://mosh3eb.github.io/motify/usage)
-- [API Reference](https://mosh3eb.github.io/motify/api)
+Visit our [documentation](https://motify-music.netlify.app) for detailed guides on:
+- [Installation](https://motify-music.netlify.app/installation/)
+- [Usage](https://motify-music.netlify.app/usage/)
+- [API Reference](https://motify-music.netlify.app/api/)
 
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/mosh3eb/motify)
-- [Documentation](https://mosh3eb.github.io/motify/)
+- [Documentation](https://motify-music.netlify.app)
 - [Issue Tracker](https://github.com/mosh3eb/motify/issues)
 
 ## 📝 License

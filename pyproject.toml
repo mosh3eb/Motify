@@ -4,7 +4,7 @@ build-backend = "pdm.backend"
 
 [project]
 name = "motify-music"
-version = "1.0.4"
+version = "1.0.5"
 description = "A modern Python-based Spotify Music Downloader with a beautiful GUI, playlist management, and high-quality audio support"
 readme = "README_PYPI.md"
 authors = [{ name = "Mosh3eb", email = "Mosh2eb@gmail.com" }]
@@ -37,11 +37,11 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/mosh3eb/motify"
-Documentation = "https://mosh3eb.github.io/motify/"
+Homepage = "https://motify-music.netlify.app"
+Documentation = "https://motify-music.netlify.app"
 Repository = "https://github.com/mosh3eb/motify.git"
 "Bug Tracker" = "https://github.com/mosh3eb/motify/issues"
-"Changelog" = "https://mosh3eb.github.io/motify/changelog"
+"Changelog" = "https://motify-music.netlify.app/changelog"
 
 [project.scripts]
 motify = "src.app:main"
