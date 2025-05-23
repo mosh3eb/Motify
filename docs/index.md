@@ -1,3 +1,8 @@
+---
+title: Welcome to Motify Docs
+favicon: assets/images/favicon.svg
+---
+
 # Welcome to Motify Docs
 
 Motify is a modern, open-source Spotify music downloader and manager with a beautiful GUI, advanced playlist features, and high-quality audio support.
