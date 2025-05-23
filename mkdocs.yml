@@ -4,6 +4,8 @@ site_author: Mosh3eb
 repo_name: mosh3eb/motify
 repo_url: https://github.com/mosh3eb/motify
 edit_uri: edit/main/docs/
+site_dir: site
+docs_dir: docs
 
 theme:
   name: material
@@ -24,7 +26,6 @@ theme:
     - content.code.copy
     - content.code.annotate
     - content.tabs.link
-    - content.tabs.remote
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil
@@ -32,6 +33,8 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: assets/favicon.png
+  static_templates:
+    - 404.html
 
 extra_css:
   - assets/stylesheets/extra.css
@@ -39,15 +42,16 @@ extra_javascript:
   - assets/javascripts/extra.js
 
 markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - meta
+  - def_list
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
@@ -58,8 +62,6 @@ markdown_extensions:
   - toc:
       permalink: true
       title: On this page
-  - pymdownx.arithmatex:
-      generic: true
   - pymdownx.details
   - pymdownx.mark
   - pymdownx.smartsymbols
@@ -72,7 +74,6 @@ markdown_extensions:
 
 plugins:
   - search
-  - social
   - tags
   - git-revision-date-localized
   - minify:
@@ -80,56 +81,18 @@ plugins:
       minify_js: true
       minify_css: true
 
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/mosh3eb/motify
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/motify-music/
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/motify
-  version:
-    provider: mike
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
-  consent:
-    title: Cookie consent
-    description: >-
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they search for. With your consent, you're helping us to
-      make our documentation better.
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-    - navigation.top
-    - search.highlight
-    - search.share
-    - content.code.copy
-    - content.code.annotate
-    - content.tabs.link
-    - content.tabs.remote
-  palette:
-    - scheme: default
-      primary: green
-      accent: green
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      primary: green
-      accent: green
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
-
 nav:
   - Home: index.md
   - Installation: installation.md
   - User Guide: usage.md
-  - Features: features.md
-  - API Reference: api.md
+  - Features:
+      - Overview: features.md
+      - History: features/history.md
+      - Lyrics: features/lyrics.md
+      - Playlist: features/playlist.md
+  - API Reference:
+      - Overview: api.md
+      - Configuration: api/configuration.md
   - Troubleshooting & FAQ: troubleshooting.md
   - Contributing: contributing.md
+  - Changelog: changelog.md

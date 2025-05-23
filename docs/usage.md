@@ -1,5 +1,34 @@
 # User Guide
 
+## Quick Start
+
+First time using Motify? Here's how to get started:
+
+1. Launch Motify with `motify`
+2. On first run, you'll be prompted to connect your Spotify account
+3. Follow the on-screen instructions to authenticate
+4. Start searching and downloading your favorite music!
+
+## Configuration
+
+You can configure Motify through:
+
+1. The settings interface in the app
+2. The `app_config.json` file
+3. Environment variables
+
+### Basic Settings
+- Download quality (MP3/FLAC)
+- Output directory
+- Theme preferences
+- Language settings
+
+### Advanced Settings
+- Proxy configuration
+- API rate limits
+- Cache settings
+- Debug mode
+
 ## First Run
 - Launch Motify with `motify`
 - On first run, you'll be prompted to connect your Spotify account

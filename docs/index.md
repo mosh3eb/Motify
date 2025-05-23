@@ -28,24 +28,65 @@ Motify is a modern, open-source Spotify music downloader and manager with a beau
 
 ## 🖼️ Screenshots
 
-<div class="grid" markdown>
-![Main Interface](assets/images/main-interface.png)
-![Playlist Management](assets/images/playlist-management.png)
-![Download Queue](assets/images/download-queue.png)
+<div class="grid cards" markdown>
+
+- ![Main Interface](assets/images/screenshots/1.png){ loading=lazy }
+  **Main Interface**
+  {: .image-caption }
+
+- ![Playlist Management](assets/images/screenshots/2.png){ loading=lazy }
+  **Playlist Management**
+  {: .image-caption }
+
+- ![Download Queue](assets/images/screenshots/3.png){ loading=lazy }
+  **Download Queue**
+  {: .image-caption }
+
+- ![Lyrics Support](assets/images/screenshots/4.png){ loading=lazy }
+  **Lyrics Support**
+  {: .image-caption }
+
+- ![History](assets/images/screenshots/5.png){ loading=lazy }
+  **History**
+  {: .image-caption }
+
+- ![Settings](assets/images/screenshots/6.png){ loading=lazy }
+  **Settings**
+  {: .image-caption }
+
+- ![Statistics](assets/images/screenshots/7.png){ loading=lazy }
+  **Statistics**
+  {: .image-caption }
+
 </div>
 
 <style>
-.grid {
+.grid.cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
-    margin: 1rem 0;
+    padding: 1rem;
 }
-.grid img {
-    width: 100%;
-    height: auto;
+
+.grid.cards > * {
+    border: 1px solid rgba(128, 128, 128, 0.1);
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.grid.cards img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 0.5rem;
 }
 </style>
 
@@ -119,4 +160,4 @@ For issues, feature requests, or contributions, visit our [GitHub repository](ht
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details. 
+This project is licensed under the MIT License. See the [LICENSE on GitHub](https://github.com/mosh3eb/motify/blob/main/LICENSE) for details.
