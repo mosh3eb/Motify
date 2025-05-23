@@ -1,3 +1,9 @@
+---
+title: Motify Music
+description: A modern Python-based Spotify Music Downloader with a beautiful GUI
+image: https://raw.githubusercontent.com/mosh3eb/motify/main/og-image.png
+---
+
 # Motify Music
 
 A modern Python-based Spotify Music Downloader with a beautiful GUI, playlist management, and high-quality audio support.
