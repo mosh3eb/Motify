@@ -7,11 +7,28 @@
   # Motify
 
   <p>A powerful and modern music downloader and manager application built with Python.</p>
-  
+
+  <!-- Release & License -->
   [![Release](https://img.shields.io/github/v/release/mosh3eb/motify?color=1DB954&style=for-the-badge)](https://github.com/mosh3eb/motify/releases)
   [![License](https://img.shields.io/github/license/mosh3eb/motify?color=1DB954&style=for-the-badge)](LICENSE)
+  
+  <!-- Python & Dependencies -->
   [![Python](https://img.shields.io/badge/python-3.10+-1DB954?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+  [![PyPI](https://img.shields.io/pypi/v/motify?color=1DB954&style=for-the-badge)](https://pypi.org/project/motify/)
+  [![PyPI Downloads](https://img.shields.io/pypi/dm/motify?color=1DB954&style=for-the-badge)](https://pypi.org/project/motify/)
+  
+  <!-- Build & Tests -->
+  [![Build Status](https://img.shields.io/github/actions/workflow/status/mosh3eb/motify/release.yml?branch=main&color=1DB954&style=for-the-badge)](https://github.com/mosh3eb/motify/actions)
+  [![Code Coverage](https://img.shields.io/codecov/c/github/mosh3eb/motify?color=1DB954&style=for-the-badge)](https://codecov.io/gh/mosh3eb/motify)
+  
+  <!-- Repository -->
   [![Stars](https://img.shields.io/github/stars/mosh3eb/motify?color=1DB954&style=for-the-badge)](https://github.com/mosh3eb/motify/stargazers)
+  [![Issues](https://img.shields.io/github/issues/mosh3eb/motify?color=1DB954&style=for-the-badge)](https://github.com/mosh3eb/motify/issues)
+  [![Pull Requests](https://img.shields.io/github/issues-pr/mosh3eb/motify?color=1DB954&style=for-the-badge)](https://github.com/mosh3eb/motify/pulls)
+  
+  <!-- Social -->
+  [![Discord](https://img.shields.io/discord/YOUR_DISCORD_ID?color=1DB954&style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-invite)
+  [![Twitter Follow](https://img.shields.io/twitter/follow/your_twitter?color=1DB954&style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/your_twitter)
 </div>
 
 ## ✨ Features
