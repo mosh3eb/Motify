@@ -44,25 +44,25 @@ motify --download "playlist_url"
 
 ## 🖼️ Screenshots
 
-![Main Interface](../assets/images/screenshots/main-interface.png)
+![Main Interface](assets/images/screenshots/main-interface.png)
 *Clean and intuitive main interface*
 
-![Playlist Management](../assets/images/screenshots/playlist-management.png)
+![Playlist Management](assets/images/screenshots/playlist-management.png)
 *Advanced playlist management*
 
-![Download Queue](../assets/images/screenshots/download-queue.png)
+![Download Queue](assets/images/screenshots/download-queue.png)
 *Efficient download queue system*
 
-![Lyrics Support](../assets/images/screenshots/lyrics-support.png)
+![Lyrics Support](assets/images/screenshots/lyrics-support.png)
 *Built-in lyrics support*
 
-![History](../assets/images/screenshots/history.png)
+![History](assets/images/screenshots/history.png)
 *Detailed download history*
 
-![Settings](../assets/images/screenshots/settings.png)
+![Settings](assets/images/screenshots/settings.png)
 *Customizable settings*
 
-![Statistics](../assets/images/screenshots/statistics.png)
+![Statistics](assets/images/screenshots/statistics.png)
 *Usage statistics and insights*
 
 ## 🌟 Why Choose Motify?
