@@ -7,7 +7,7 @@ A modern Python-based Spotify Music Downloader with a beautiful GUI, playlist ma
 [![Python Version](https://img.shields.io/pypi/pyversions/motify-music?color=1DB954&style=flat-square)](https://pypi.org/project/motify-music/)
 [![Contributors](https://img.shields.io/github/contributors/mosh3eb/motify?color=1DB954&style=flat-square)](https://github.com/mosh3eb/motify/graphs/contributors)
 
-![Motify Cover](docs/assets/images/Cover.jpg)
+![Motify Cover](https://raw.githubusercontent.com/mosh3eb/motify/main/docs/assets/images/Cover.jpg)
 
 ## ✨ Features
 
