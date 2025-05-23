@@ -4,7 +4,7 @@ build-backend = "pdm.backend"
 
 [project]
 name = "motify-music"
-version = "1.0.5"
+version = "1.0.6"
 description = "A modern Python-based Spotify Music Downloader with a beautiful GUI, playlist management, and high-quality audio support"
 readme = "README_PYPI.md"
 authors = [{ name = "Mosh3eb", email = "Mosh2eb@gmail.com" }]

@@ -1,52 +1,63 @@
-# Spotify Motify
+# Motify Music
 
 A modern Python-based Spotify Music Downloader with a beautiful GUI, playlist management, and high-quality audio support.
 
 [![License](https://img.shields.io/pypi/l/motify-music?color=1DB954&style=flat-square)](https://pypi.org/project/motify-music/)
 [![PyPI version](https://img.shields.io/pypi/v/motify-music?color=1DB954&style=flat-square)](https://pypi.org/project/motify-music/)
 [![Python Version](https://img.shields.io/pypi/pyversions/motify-music?color=1DB954&style=flat-square)](https://pypi.org/project/motify-music/)
-[![Contributors](https://img.shields.io/github/contributors/mosh3eb/motify?color=1DB954&style=flat-square)](https://github.com/mosh3eb/motify/graphs/contributors)
+[![Docs](https://img.shields.io/badge/docs-netlify-success?style=flat-square&color=1DB954)](https://motify-music.netlify.app/)
 
-![Motify Cover](https://raw.githubusercontent.com/mosh3eb/motify/main/docs/assets/images/Cover.jpg)
+<div align="center">
+  <img src="https://raw.githubusercontent.com/mosh3eb/motify/main/docs/assets/images/Cover.jpg" alt="Motify Cover" width="800"/>
+</div>
 
 ## ✨ Features
 
-- 🎵 Download music from Spotify with high-quality audio
-- 🎨 Modern and intuitive graphical user interface
-- 📱 Playlist management and queue system
+- 🎵 High-quality audio downloads (320kbps)
+- 🎨 Modern and intuitive GUI
+- 📱 Advanced playlist management
 - 📊 Download history and statistics
-- 🎸 Lyrics support
-- ⚡ Fast and efficient downloads
+- 🎼 Built-in lyrics support
+- 🌙 Dark/Light theme support
+- 🔄 Automatic updates
+- 🔒 Secure and private
 
-## 🚀 Installation
+## 🚀 Quick Start
 
+1. Install Motify:
 ```bash
 pip install motify-music
 ```
-
-## 🎮 Quick Start
-
-1. Install the package
 2. Run Motify:
-   ```bash
-   motify
-   ```
-3. Configure your Spotify credentials on first run
-4. Start downloading your favorite music!
+```bash
+motify
+```
 
 ## 📚 Documentation
 
-Visit our [documentation](https://motify-music.netlify.app) for detailed guides on:
-- [Installation](https://motify-music.netlify.app/installation/)
-- [Usage](https://motify-music.netlify.app/usage/)
-- [API Reference](https://motify-music.netlify.app/api/)
+Full documentation is available at [motify-music.netlify.app](https://motify-music.netlify.app/)
+- Installation guide
+- User manual
+- API reference
+- Troubleshooting
+- Contributing
+
+## 🖥️ Live Demo
+
+Try the [Motify Demo](https://motify-music.netlify.app/demo/) to search, preview, and download sample tracks directly in your browser!
+
+## 🤝 Contributing
+
+We welcome contributions! Please see the [contributing guide](https://motify-music.netlify.app/contributing) for details.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/mosh3eb/motify/blob/main/LICENSE) file for details.
 
 ## 🔗 Links
 
+- [Documentation](https://motify-music.netlify.app/)
+- [PyPI Package](https://pypi.org/project/motify-music/)
 - [GitHub Repository](https://github.com/mosh3eb/motify)
-- [Documentation](https://motify-music.netlify.app)
 - [Issue Tracker](https://github.com/mosh3eb/motify/issues)
-
-## 📝 License
-
-This project is licensed under the MIT License.
+- [Changelog](https://motify-music.netlify.app/changelog)

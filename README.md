@@ -1,3 +1,42 @@
+# Mohamed Salem (mosh3eb)
+
+🏠 Working from home | 🌍 Based in Egypt
+💼 Open to Opportunities | 🎯 Junior Developer
+🏢 Freelance Developer | 🌟 Building Motify
+
+> "💻 Code is poetry, and I'm writing my masterpiece one commit at a time ✨"
+> 
+> "☕ Turning coffee into code since 2021 | 🚀 Building the future"
+> 
+> "🎯 Debugging life, one bug at a time | 🌟 Making dreams into code"
+
+## 👨‍💻 About Me
+Back-End Developer with a passion for building robust and scalable applications. Specializing in Python development and AI engineering, I create solutions that make a difference. Currently working as a freelance developer and building Motify, an open-source music application.
+
+## 🛠️ Skills
+- **Languages:** Python, JavaScript, HTML/CSS
+- **Backend:** Django, Flask, FastAPI
+- **AI/ML:** TensorFlow, PyTorch, Scikit-learn
+- **Tools:** Git, Docker, Linux
+- **Databases:** PostgreSQL, MongoDB
+
+## 🌟 Current Focus
+- Building AI-powered applications
+- Contributing to open-source projects
+- Learning new technologies and best practices
+- Seeking opportunities to grow as a developer
+- Developing Motify - A Python-based Spotify Music Downloader
+
+## 🔗 Connect With Me
+- [Portfolio](https://mosh3eb.link)
+- [LinkedIn](https://linkedin.com/in/codermo)
+- [Instagram](https://instagram.com/sav00m)
+- [Twitter](https://twitter.com/mo_coder)
+
+## 🏆 Achievements
+- Quickdraw Achievement
+- YOLO Achievement
+
 # Motify Music
 
 A modern Python-based Spotify Music Downloader with a beautiful GUI, playlist management, and high-quality audio support.
