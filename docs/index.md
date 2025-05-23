@@ -1,74 +1,142 @@
-# Welcome to Motify Documentation
+# Motify Documentation
+
+Welcome to the official Motify documentation. This comprehensive guide will help you understand and use all features of Motify effectively.
+
+## 🚀 Quick Navigation
 
 <div class="grid cards" markdown>
 
--   :fontawesome-solid-music: __[Quick Start](usage.md)__
+-   :fontawesome-solid-rocket: __[Installation Guide](installation.md)__
     
     ---
     
-    Get started with Motify in minutes. Learn how to install and configure the application.
+    Detailed installation instructions for different operating systems and environments.
 
--   :fontawesome-solid-book: __[Features](features/playlist.md)__
+-   :fontawesome-solid-book: __[User Guide](usage.md)__
     
     ---
     
-    Explore Motify's powerful features including playlist management, download history, and lyrics support.
+    Complete user guide with step-by-step instructions and best practices.
 
 -   :fontawesome-solid-code: __[API Reference](api.md)__
     
     ---
     
-    Detailed API documentation for developers and advanced users.
+    Technical documentation for developers and advanced users.
 
--   :fontawesome-solid-users: __[Contributing](contributing.md)__
+-   :fontawesome-solid-wrench: __[Configuration](api/configuration.md)__
     
     ---
     
-    Learn how to contribute to Motify and help improve the project.
+    Advanced configuration options and customization guide.
 
 </div>
 
-## What is Motify?
+## 📚 Documentation Sections
 
-Motify is a modern Python-based Spotify Music Downloader that combines powerful features with a beautiful user interface. It allows you to:
+### User Guides
+- [Installation Guide](installation.md) - How to install Motify
+- [Quick Start Guide](usage.md) - Get started in minutes
+- [User Interface Guide](usage.md#user-interface) - Understanding the GUI
+- [Download Guide](usage.md#downloading-music) - How to download music
+- [Playlist Management](features/playlist.md) - Working with playlists
+- [Download History](features/history.md) - Tracking your downloads
+- [Lyrics Support](features/lyrics.md) - Using lyrics features
 
-- Download music from Spotify with high-quality audio
-- Manage playlists and create download queues
-- View download history and statistics
-- Access lyrics for your favorite songs
-- Enjoy a modern and intuitive GUI
+### Technical Documentation
+- [API Overview](api.md) - Introduction to the API
+- [Configuration](api/configuration.md) - Advanced configuration
+- [Spotify Service](api/spotify.md) - Spotify integration details
+- [Download Service](api/downloader.md) - Download functionality
+- [Development Guide](contributing.md) - Contributing to Motify
+- [Changelog](changelog.md) - Version history and changes
 
-## Key Features
+## 🎯 Key Features
 
-### 🎵 High-Quality Downloads
-Download your favorite tracks in the highest available quality, with support for various audio formats.
+### Music Download
+- High-quality audio downloads
+- Multiple format support (MP3, M4A, FLAC)
+- Batch download capabilities
+- Download queue management
+- Progress tracking and resume support
 
-### 🎨 Modern Interface
-Enjoy a beautiful and intuitive graphical user interface that makes music management a pleasure.
+### Playlist Management
+- Spotify playlist integration
+- Playlist organization
+- Download queue system
+- Playlist statistics
+- Export/import functionality
 
-### 📱 Playlist Management
-Easily manage your playlists, create download queues, and organize your music collection.
+### User Interface
+- Modern and intuitive design
+- Dark/Light theme support
+- Responsive layout
+- Keyboard shortcuts
+- Progress indicators
 
-### 📊 Download History
-Keep track of your downloads with detailed history and statistics.
+### Advanced Features
+- Lyrics integration
+- Download history
+- Statistics and analytics
+- Custom naming patterns
+- Metadata management
 
-### 🎸 Lyrics Support
-Access lyrics for your favorite songs while downloading.
+## 🔧 Configuration
 
-## Getting Started
+Learn how to customize Motify to your needs:
+- [Basic Configuration](api/configuration.md#basic-configuration)
+- [Advanced Settings](api/configuration.md#advanced-settings)
+- [Environment Variables](api/configuration.md#environment-variables)
+- [File Naming](api/configuration.md#file-naming)
 
-1. [Install Motify](installation.md)
-2. [Configure your Spotify credentials](usage.md#configuration)
-3. [Start downloading music](usage.md#downloading-music)
+## 💻 Development
 
-## Support
+Information for developers and contributors:
+- [Contributing Guide](contributing.md)
+- [Code Style Guide](contributing.md#code-style)
+- [Testing Guide](contributing.md#testing)
+- [Release Process](contributing.md#releasing)
 
-If you need help or have questions:
+## 📝 Examples
 
-- Check the [documentation](usage.md)
-- Visit our [GitHub repository](https://github.com/mosh3eb/motify)
-- [Report issues](https://github.com/mosh3eb/motify/issues)
+### Basic Usage
+```python
+from motify_music import Motify
 
-## License
+# Initialize Motify
+app = Motify()
+
+# Download a track
+app.download_track("spotify:track:track_id")
+
+# Download a playlist
+app.download_playlist("spotify:playlist:playlist_id")
+```
+
+### Advanced Configuration
+```python
+from motify_music import Config
+
+# Custom configuration
+config = Config({
+    "download": {
+        "quality": "high",
+        "format": "flac",
+        "path": "~/Music/Motify"
+    }
+})
+
+# Initialize with custom config
+app = Motify(config=config)
+```
+
+## 🤝 Support
+
+Need help? Here's how to get support:
+- [GitHub Issues](https://github.com/mosh3eb/motify/issues)
+- [Discord Community](https://discord.gg/motify)
+- [Email Support](mailto:support@motify.app)
+
+## 📜 License
 
 Motify is licensed under the MIT License. See the [LICENSE](https://github.com/mosh3eb/motify/blob/main/LICENSE) file for details. 
