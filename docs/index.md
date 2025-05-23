@@ -27,7 +27,27 @@ Motify is a modern, open-source Spotify music downloader and manager with a beau
 ---
 
 ## 🖼️ Screenshots
-![Motify UI](assets/screenshots/ui-dark.png)
+
+<div class="grid" markdown>
+![Main Interface](assets/images/main-interface.png)
+![Playlist Management](assets/images/playlist-management.png)
+![Download Queue](assets/images/download-queue.png)
+</div>
+
+<style>
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+</style>
 
 ---
 
