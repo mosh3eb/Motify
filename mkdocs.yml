@@ -10,12 +10,18 @@ docs_dir: docs
 theme:
   name: material
   palette:
-    scheme: slate
-    primary: green
-    accent: green
-    toggle:
-      icon: material/brightness-7
-      name: Switch to light mode
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.tabs
     - navigation.sections
@@ -83,6 +89,7 @@ plugins:
 
 nav:
   - Home: index.md
+  - Demo: demo.md
   - Installation: installation.md
   - User Guide: usage.md
   - Features:
