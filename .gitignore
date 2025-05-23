@@ -45,3 +45,25 @@ download_status.json
 downloaded_tracks.json
 playlist_queue.json
 *.cache
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore build and distribution directories
+dist/
+build/
+*.egg-info/
+
+# Ignore site output
+site/
+
+# Ignore virtual environments
+.venv/
+venv/
+
+# Ignore Python cache
+__pycache__/
+
+# Ignore resources (if not needed)
+resources/
+
