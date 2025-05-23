@@ -1,54 +1,53 @@
-# Motify Demo
+# Try Motify Demo
 
-Experience the power of Motify with our interactive demo. Try out the core features and see how easy it is to download and manage your Spotify music.
+Experience the power of Motify with our interactive demo. Search for tracks, preview them, and see how easy it is to manage your Spotify music.
 
 ## 🎵 Live Demo
 
 <div class="demo-container">
-  <div class="demo-player">
-    <div class="demo-track">
-      <img src="../assets/images/screenshots/main-interface.png" alt="Demo Track" class="demo-track-image">
-      <div class="demo-track-info">
-        <h3>Sample Track</h3>
-        <p>Artist Name</p>
-      </div>
-    </div>
-    <div class="demo-controls">
-      <button class="demo-button" onclick="showDemoMessage('Downloading...')">
-        <span class="demo-icon">⬇️</span> Download
-      </button>
-      <button class="demo-button" onclick="showDemoMessage('Added to queue!')">
-        <span class="demo-icon">➕</span> Queue
+  <div class="search-section">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search for tracks..." class="search-input">
+      <button id="search-button" class="search-button">
+        <span class="demo-icon">🔍</span> Search
       </button>
     </div>
   </div>
+  
+  <div id="search-results" class="search-results">
+    <!-- Search results will appear here -->
+  </div>
+  
+  <div id="preview-player" class="preview-player">
+    <!-- Preview player will appear here -->
+  </div>
 </div>
 
-## ✨ Key Features
+## ✨ Features Available in Demo
 
 <div class="grid features" markdown>
 
-### 🎯 Easy Download
+### 🔍 Search Tracks
+- Real-time search
+- Track previews
+- Artist information
+- Album artwork
+
+### 🎵 Preview Music
+- 30-second previews
+- High-quality audio
+- Instant playback
+- Track information
+
+### ⬇️ Download (Full Version)
 - One-click download
 - Batch processing
 - High-quality audio
 - Metadata support
 
-### 🎨 Beautiful Interface
-- Modern design
-- Dark/Light themes
-- Responsive layout
-- Intuitive controls
-
-### 📱 Playlist Support
-- Import playlists
-- Queue management
-- Download history
-- Progress tracking
-
 </div>
 
-## 🚀 Try It Now
+## 🚀 Get the Full Version
 
 ```bash
 # Install the full version
@@ -72,20 +71,7 @@ motify
 
 Try the demo on your mobile device to experience the responsive design!
 
-<script>
-function showDemoMessage(message) {
-  const demoContainer = document.querySelector('.demo-container');
-  const messageElement = document.createElement('div');
-  messageElement.className = 'demo-message';
-  messageElement.textContent = message;
-  
-  demoContainer.appendChild(messageElement);
-  
-  setTimeout(() => {
-    messageElement.remove();
-  }, 2000);
-}
-</script>
+<script src="../../site/assets/javascripts/demo.js"></script>
 
 <style>
 .demo-container {
@@ -98,48 +84,28 @@ function showDemoMessage(message) {
   -webkit-backdrop-filter: blur(10px);
 }
 
-.demo-player {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
+.search-section {
+  margin-bottom: 2rem;
 }
 
-.demo-track {
+.search-box {
   display: flex;
-  align-items: center;
   gap: 1rem;
-  width: 100%;
-  max-width: 400px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.demo-track-image {
-  width: 80px;
-  height: 80px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.demo-track-info {
+.search-input {
   flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: 2px solid var(--md-primary-fg-color);
+  border-radius: 25px;
+  font-size: 1rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
 }
 
-.demo-track-info h3 {
-  margin: 0;
-  color: var(--md-primary-fg-color);
-}
-
-.demo-track-info p {
-  margin: 0.5rem 0 0;
-  opacity: 0.8;
-}
-
-.demo-controls {
-  display: flex;
-  gap: 1rem;
-}
-
-.demo-button {
+.search-button {
   background: var(--md-primary-fg-color);
   color: white;
   border: none;
@@ -153,7 +119,76 @@ function showDemoMessage(message) {
   transition: all 0.3s ease;
 }
 
-.demo-button:hover {
+.search-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--md-default-bg-color);
+  border-radius: var(--md-card-radius);
+  transition: all 0.3s ease;
+}
+
+.track-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.track-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.track-info {
+  flex: 1;
+}
+
+.track-info h3 {
+  margin: 0;
+  color: var(--md-primary-fg-color);
+}
+
+.track-info p {
+  margin: 0.5rem 0 0;
+  opacity: 0.8;
+}
+
+.track-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.preview-button,
+.download-button {
+  background: var(--md-primary-fg-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.preview-button:hover,
+.download-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -176,6 +211,20 @@ function showDemoMessage(message) {
   z-index: 1000;
 }
 
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: #ff4444;
+  font-weight: 600;
+}
+
 @keyframes slideUp {
   from {
     transform: translate(-50%, 100%);
@@ -192,17 +241,21 @@ function showDemoMessage(message) {
     padding: 1rem;
   }
   
-  .demo-track {
+  .search-box {
+    flex-direction: column;
+  }
+  
+  .search-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .track-item {
     flex-direction: column;
     text-align: center;
   }
   
-  .demo-controls {
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .demo-button {
+  .track-actions {
     width: 100%;
     justify-content: center;
   }
