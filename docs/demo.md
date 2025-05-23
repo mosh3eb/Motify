@@ -28,7 +28,7 @@ Experience the power of Motify with our interactive demo. Search for tracks and 
 console.log('Demo page loaded');
 </script>
 
-<script src="../../site/assets/javascripts/demo.js"></script>
+<script src="assets/javascripts/demo.js"></script>
 
 ## ✨ Demo Features
 
