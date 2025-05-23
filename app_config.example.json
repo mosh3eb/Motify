@@ -1,0 +1,12 @@
+{
+    "theme": "cyborg",
+    "audio_quality": "Medium",
+    "audio_format": "m4a",
+    "concurrent_downloads": 1,
+    "auto_start_queue": false,
+    "notification_enabled": true,
+    "custom_download_folder": "downloads",
+    "skip_existing": true,
+    "client_id": "YOUR_SPOTIFY_CLIENT_ID",
+    "client_secret": "YOUR_SPOTIFY_CLIENT_SECRET"
+}

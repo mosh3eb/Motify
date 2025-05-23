@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Motify
+Comment=Music Downloader and Manager
+Exec=motify
+Icon=/usr/share/icons/hicolor/256x256/apps/motify.png
+Terminal=false
+Categories=Audio;Music;Player;AudioVideo;

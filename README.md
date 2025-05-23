@@ -24,13 +24,33 @@ A powerful and modern music downloader and manager application built with Python
 - Python 3.10 or higher
 - pip (Python package manager)
 - Spotify Developer Account for API access
+- Git (for cloning the repository)
 
-### Setup
+### Setup Methods
 
+#### Method 1: Direct Download
+1. Download the latest release from the [Releases page](https://github.com/mosh3eb/motify/releases)
+2. Extract the downloaded zip file
+3. Navigate to the extracted directory
+
+#### Method 2: Clone Repository
 1. Clone the repository:
 ```bash
 git clone https://github.com/mosh3eb/motify.git
 cd motify
+```
+
+### Installation Steps
+
+1. Create and activate a virtual environment (recommended):
+```bash
+# On macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+# On Windows
+python -m venv venv
+.\venv\Scripts\activate
 ```
 
 2. Install dependencies:
@@ -42,30 +62,24 @@ pip install -r requirements.txt
    - Go to [Spotify Developer Dashboard](https://developer.spotify.com/dashboard)
    - Create a new application
    - Copy your Client ID and Client Secret
+   - Add `http://localhost:8888/callback` as a Redirect URI in your Spotify app settings
 
-## ⚙️ Configuration
+4. Create a copy of the example configuration:
+```bash
+cp app_config.example.json app_config.json
+```
 
-The application can be configured through `app_config.json`:
+5. Configure your Spotify API credentials in `app_config.json`
 
-| Setting | Description | Default |
-|---------|------------|---------|
-| theme | UI theme selection | cyborg |
-| audio_quality | Audio quality (Low/Medium/High) | Medium |
-| audio_format | Output audio format | m4a |
-| concurrent_downloads | Number of simultaneous downloads | 1 |
-| auto_start_queue | Auto-start download queue on launch | false |
-| notification_enabled | Enable/disable notifications | true |
-| custom_download_folder | Custom download location | downloads |
-| skip_existing | Skip already downloaded files | true |
+### Running the Application
 
-## 🚦 Getting Started
+1. Activate the virtual environment (if not already activated):
+```bash
+# On macOS/Linux
+source venv/bin/activate
 
-1. Configure your Spotify API credentials in `app_config.json`:
-```json
-{
-    "client_id": "your_client_id",
-    "client_secret": "your_client_secret"
-}
+# On Windows
+.\venv\Scripts\activate
 ```
 
 2. Launch the application:
@@ -122,6 +136,56 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Spotify API for music data
 - Python community for amazing libraries
 - Contributors and users of Motify
+
+## 🔧 Deployment
+
+### Local Deployment
+
+1. Follow the installation steps above
+2. Configure your settings in `app_config.json`
+3. Run the application using `python run.py`
+
+### System-wide Installation (Optional)
+
+#### On macOS
+1. Create an application bundle:
+```bash
+pip install py2app
+python setup.py py2app
+```
+2. Move the created .app file to your Applications folder
+
+#### On Windows
+1. Create an executable:
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed --icon=resources/icon.ico run.py
+```
+2. The executable will be created in the `dist` directory
+
+#### On Linux
+1. Create a desktop entry:
+```bash
+sudo cp resources/motify.desktop /usr/share/applications/
+sudo cp resources/icon.png /usr/share/icons/hicolor/256x256/apps/motify.png
+```
+
+### Docker Deployment (Optional)
+
+1. Build the Docker image:
+```bash
+docker build -t motify .
+```
+
+2. Run the container:
+```bash
+docker run -d \
+  -v ${PWD}/downloads:/app/downloads \
+  -v ${PWD}/app_config.json:/app/app_config.json \
+  -e DISPLAY=${DISPLAY} \
+  -v /tmp/.X11-unix:/tmp/.X11-unix \
+  motify
+```
 
 ---
 Made with ❤️ by Mosh3eb
