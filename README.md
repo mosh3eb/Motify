@@ -1,8 +1,24 @@
-# Motify 🎵
+<div align="center">
+  <img src="resources/assets/cover.png" alt="Motify Cover" width="100%">
+  
+  <br>
+  <br>
 
-A powerful and modern music downloader and manager application built with Python. Motify allows you to easily download and manage your music collection with a beautiful user interface and seamless Spotify integration.
+  <img src="resources/assets/logo.png" alt="Motify Logo" width="150px">
 
-![Motify Interface](Screen%20Shot%202025-04-14%20at%2000.22.53%20AM.png)
+  # Motify
+
+  <p>A powerful and modern music downloader and manager application built with Python.</p>
+  
+  [![Release](https://img.shields.io/github/v/release/mosh3eb/motify?color=1DB954&style=for-the-badge)](https://github.com/mosh3eb/motify/releases)
+  [![License](https://img.shields.io/github/license/mosh3eb/motify?color=1DB954&style=for-the-badge)](LICENSE)
+  [![Python](https://img.shields.io/badge/python-3.10+-1DB954?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
+  [![Stars](https://img.shields.io/github/stars/mosh3eb/motify?color=1DB954&style=for-the-badge)](https://github.com/mosh3eb/motify/stargazers)
+
+  <br>
+  
+  <img src="Screen%20Shot%202025-04-14%20at%2000.22.53%20AM.png" alt="Motify Interface" width="80%">
+</div>
 
 ## ✨ Features
 

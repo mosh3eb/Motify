@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: transparent;
+        }
+        .logo {
+            font-family: 'Arial', sans-serif;
+            font-size: 72px;
+            font-weight: bold;
+            color: #1DB954;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #1DB954, #169C46);
+            border-radius: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(29,185,84,0.3);
+        }
+        .music-note {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 6px solid white;
+            border-radius: 50%;
+            border-bottom-right-radius: 0;
+            transform: rotate(-10deg);
+        }
+        .music-note::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: -6px;
+            width: 6px;
+            height: 25px;
+            background: white;
+        }
+        .text-part {
+            background: linear-gradient(135deg, #1DB954, #169C46);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <div class="icon">
+            <div class="music-note"></div>
+        </div>
+        <div class="text-part">Motify</div>
+    </div>
+</body>
+</html>
