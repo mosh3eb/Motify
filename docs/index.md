@@ -137,16 +137,3 @@ We welcome contributions! Check out our [Contributing Guide](contributing.md) to
 - Advanced analytics
 
 </div>
-
-## 🌟 Showcase
-
-<div class="grid showcase" markdown>
-
-### User Projects
-- [Project 1](https://github.com/user/project1)
-  Description of the project
-
-- [Project 2](https://github.com/user/project2)
-  Description of the project
-
-</div>

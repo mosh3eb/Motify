@@ -630,41 +630,6 @@ h3.feature-title,
   color: var(--md-primary-fg-color);
 }
 
-/* Showcase Grid */
-.grid.showcase {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-}
-
-.grid.showcase > div {
-  background: var(--md-card-bg-color);
-  border-radius: var(--md-card-radius);
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.grid.showcase > div:hover {
-  transform: translateY(-3px);
-}
-
-.grid.showcase h3 {
-  color: var(--md-primary-fg-color);
-  margin-top: 0;
-  font-size: 1.2rem;
-}
-
-.grid.showcase a {
-  color: var(--md-primary-fg-color);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.grid.showcase a:hover {
-  text-decoration: underline;
-}
-
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -697,16 +662,14 @@ h3.feature-title,
 @media screen and (max-width: 76.1875em) {
   .grid.quick-start,
   .grid.features,
-  .grid.roadmap,
-  .grid.showcase {
+  .grid.roadmap {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
   
   .grid.quick-start > div,
   .grid.features > div,
-  .grid.roadmap > div,
-  .grid.showcase > div {
+  .grid.roadmap > div {
     padding: 1rem;
   }
 }
