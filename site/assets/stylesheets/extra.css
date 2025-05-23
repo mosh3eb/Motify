@@ -1,0 +1,231 @@
+/* Custom Variables */
+:root {
+  --md-primary-fg-color: #1DB954;
+  --md-primary-fg-color--light: #1ed760;
+  --md-primary-fg-color--dark: #1aa34a;
+  --md-accent-fg-color: #1DB954;
+  --md-accent-fg-color--transparent: rgba(29, 185, 84, 0.1);
+}
+
+/* Custom Header */
+.md-header {
+  background: linear-gradient(45deg, #1DB954, #1ed760);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Custom Navigation */
+.md-nav__title {
+  background: linear-gradient(45deg, #1DB954, #1ed760);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Cards */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.md-typeset .admonition:hover,
+.md-typeset details:hover {
+  transform: translateY(-2px);
+}
+
+/* Custom Code Blocks */
+.md-typeset pre {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.md-typeset code {
+  border-radius: 4px;
+}
+
+/* Custom Buttons */
+.md-typeset .md-button {
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.md-typeset .md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Custom Tables */
+.md-typeset table {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.md-typeset table th {
+  background: linear-gradient(45deg, #1DB954, #1ed760);
+  color: white;
+}
+
+/* Custom Footer */
+.md-footer {
+  background: linear-gradient(45deg, #1DB954, #1ed760);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1DB954;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1ed760;
+}
+
+/* Custom Selection */
+::selection {
+  background: var(--md-primary-fg-color--transparent);
+  color: var(--md-primary-fg-color);
+}
+
+/* Custom Links */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  transition: color 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: var(--md-primary-fg-color--light);
+  text-decoration: none;
+}
+
+/* Custom Headers */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: var(--md-primary-fg-color);
+}
+
+/* Custom Navigation Tabs */
+.md-tabs {
+  background: linear-gradient(45deg, #1DB954, #1ed760);
+}
+
+/* Custom Search */
+.md-search__input {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.md-search__input:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Custom Sidebar */
+.md-sidebar {
+  background: #1a1a1a;
+}
+
+.md-sidebar--secondary {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Content */
+.md-content {
+  background: #121212;
+}
+
+/* Custom Code Copy Button */
+.md-clipboard {
+  color: var(--md-primary-fg-color);
+}
+
+/* Custom Admonitions */
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .note > .admonition-title,
+.md-typeset .note > summary {
+  background-color: var(--md-primary-fg-color--transparent);
+}
+
+/* Custom Progress Bar */
+.md-progress {
+  background: linear-gradient(45deg, #1DB954, #1ed760);
+}
+
+/* Custom Tooltips */
+.md-tooltip {
+  background: #1a1a1a;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Custom Navigation Items */
+.md-nav__item .md-nav__link--active {
+  color: var(--md-primary-fg-color);
+}
+
+/* Custom Footer Links */
+.md-footer__link {
+  color: white;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.md-footer__link:hover {
+  opacity: 1;
+}
+
+/* Custom Social Links */
+.md-social__link {
+  color: white;
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+
+.md-social__link:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* Custom Version Selector */
+.md-version {
+  color: white;
+  opacity: 0.8;
+}
+
+/* Custom Search Results */
+.md-search-result__meta {
+  background: #1a1a1a;
+}
+
+.md-search-result__item {
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.md-search-result__item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Mobile Navigation */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background: linear-gradient(45deg, #1DB954, #1ed760);
+  }
+  
+  .md-nav--primary .md-nav__title[for="__drawer"] {
+    background: linear-gradient(45deg, #1DB954, #1ed760);
+  }
+} 
